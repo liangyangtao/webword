@@ -1,0 +1,419 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>文档工作平台</title>
+	<link rel="stylesheet" type="text/css" href="word/css/word.css" />
+	<link rel="stylesheet" type="text/css" href="ueditor/themes/default/css/ueditor.css" />
+    <script type="text/javascript" src="word/js/jquery-1.8.3.min.js"></script>	
+	<script type="text/javascript" src="word/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="word/js/word.js"></script>
+	<script type="text/javascript" charset="utf-8" src="ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" src="ueditor/ueditor.all.js"></script>
+	<!-- <script type="text/javascript" src="ext/ext-all.js"></script>
+	<script type="text/javascript" src="ext/locale/ext-lang-zh_CN.js"></script> -->
+</head>
+<body>
+	<div name="头部" class="cB_header">
+		<div class="cbh_left">
+			<img src="word/img/logo.png" />
+		</div>
+		<div class="cbh_right">
+			<ul>
+				<li><img src="word/img/tool_1.png" /><br>新建</li>
+				<li><img src="word/img/tool_2.png" /><br>保存</li>
+				<li><img src="word/img/tool_3.png" /><br>另存为</li>
+				<li><img src="word/img/tool_4.png" /><br>下载</li>
+				<li><img src="word/img/tool_5.png" /><br>提交审核</li>
+				<li><img src="word/img/tool_6.png" /><br>导入</li>
+				<li name="用户名" class="cbhr_user">admin<img src="word/img/tool_b.png" /></li>
+			</ul>		
+		</div>
+	</div>
+	<div name="菜单" class="cB_banner">
+		<span class="cbb_left">
+			<ul>
+				<li class="li1">编辑</li>
+				<li>插入</li>
+				<li>表格</li>
+				<li>视图</li>
+				<li>设置</li>
+			</ul>
+		</span>
+		<span class="cbb_right">
+			<img src="word/img/cbbr_tip.png" />战略新兴产业日报（1月21日）
+		</span>
+	</div>
+	<div name="工具栏" class="cB_tools">
+		<!--编辑----------------------------------------------------------------------------------------------------  -->
+		<div name="编辑" class="edit_display tdisplay tdisplay1">
+		<div name="历史记录" class="cbt_div cbt_div1">
+			<ul>
+				<li class="li1"><div class="edui-box edui-button edui-for-undo edui-default" id="edui6"><div onmouseout="$EDITORUI[&quot;edui6&quot;].Stateful_onMouseOut(event, this);" onmouseover="$EDITORUI[&quot;edui6&quot;].Stateful_onMouseOver(event, this);" onmouseup="$EDITORUI[&quot;edui6&quot;].Stateful_onMouseUp(event, this);" onmousedown="$EDITORUI[&quot;edui6&quot;].Stateful_onMouseDown(event, this);" id="edui6_state" class="edui-default edui-state-disabled"><div class="edui-button-wrap edui-default"><div onclick="return $EDITORUI[&quot;edui6&quot;]._onClick(event, this);" onmousedown="return $EDITORUI[&quot;edui6&quot;]._onMouseDown(event, this);" class="edui-button-body edui-default" title="撤销" unselectable="on" id="edui6_body"><div class="edui-box edui-icon edui-default"></div></div></div></div></div>撤销</li>
+				<li class="li2"><div class="edui-box edui-button edui-for-redo edui-default" id="edui7"><div onmouseout="$EDITORUI[&quot;edui7&quot;].Stateful_onMouseOut(event, this);" onmouseover="$EDITORUI[&quot;edui7&quot;].Stateful_onMouseOver(event, this);" onmouseup="$EDITORUI[&quot;edui7&quot;].Stateful_onMouseUp(event, this);" onmousedown="$EDITORUI[&quot;edui7&quot;].Stateful_onMouseDown(event, this);" id="edui7_state" class="edui-default"><div class="edui-button-wrap edui-default"><div onclick="return $EDITORUI[&quot;edui7&quot;]._onClick(event, this);" onmousedown="return $EDITORUI[&quot;edui7&quot;]._onMouseDown(event, this);" class="edui-button-body edui-default" title="重做" unselectable="on" id="edui7_body"><div class="edui-box edui-icon edui-default"></div></div></div></div></div>恢复</li>
+			</ul>
+			<h4>历史记录</h4>			
+		</div>
+		<div name="剪贴板" class="cbt_div cbt_div2">
+			<ul class="ul1">
+				<li><i></i><br>粘贴</li>
+			</ul>
+			<ul class="ul2">
+				<li class="li1"><i></i>复制</li><br>
+				<li class="li2"><i></i>剪切</li><br>
+				<li class="li3"><div class="edui-box edui-button edui-for-formatmatch edui-default" id="edui17"><div onmouseout="$EDITORUI[&quot;edui17&quot;].Stateful_onMouseOut(event, this);" onmouseover="$EDITORUI[&quot;edui17&quot;].Stateful_onMouseOver(event, this);" onmouseup="$EDITORUI[&quot;edui17&quot;].Stateful_onMouseUp(event, this);" onmousedown="$EDITORUI[&quot;edui17&quot;].Stateful_onMouseDown(event, this);" id="edui17_state" class="edui-default"><div class="edui-button-wrap edui-default"><div onclick="return $EDITORUI[&quot;edui17&quot;]._onClick(event, this);" onmousedown="return $EDITORUI[&quot;edui17&quot;]._onMouseDown(event, this);" class="edui-button-body edui-default" title="格式刷" unselectable="on" id="edui17_body"><div class="edui-box edui-icon edui-default"></div></div></div></div></div>格式刷</li>
+			</ul>
+			<h4>剪贴板</h4> 
+		</div>
+		<div name="字体" class="cbt_div cbt_div3">
+			<ul class="ul1">
+				<li class="li1"><div class="edui-box edui-combox edui-for-fontfamily edui-default" id="edui92"><div onmouseout="$EDITORUI[&quot;edui92&quot;].Stateful_onMouseOut(event, this);" onmouseover="$EDITORUI[&quot;edui92&quot;].Stateful_onMouseOver(event, this);" onmouseup="$EDITORUI[&quot;edui92&quot;].Stateful_onMouseUp(event, this);" onmousedown="$EDITORUI[&quot;edui92&quot;].Stateful_onMouseDown(event, this);" id="edui92_state" title="字体" class="edui-default"><div class="edui-combox-body edui-default"><div onclick="$EDITORUI[&quot;edui92&quot;]._onButtonClick(event, this);" class="edui-box edui-button-body edui-default" id="edui92_button_body"><div class="edui-box edui-icon edui-default"></div></div><div class="edui-box edui-splitborder edui-default"></div><div onclick="$EDITORUI[&quot;edui92&quot;]._onArrowClick();" class="edui-box edui-arrow edui-default"></div></div></div></div></li>
+				<!-- 字体下拉菜单 -->
+				<li class="li2"><i></i>清除格式</li>
+				<li class="li3"><i></i>自动格式化</li>
+			</ul>
+			<ul class="ul2">
+				<li class="li1"><div class="edui-box edui-combox edui-for-fontsize edui-default" id="edui105"><div onmouseout="$EDITORUI[&quot;edui105&quot;].Stateful_onMouseOut(event, this);" onmouseover="$EDITORUI[&quot;edui105&quot;].Stateful_onMouseOver(event, this);" onmouseup="$EDITORUI[&quot;edui105&quot;].Stateful_onMouseUp(event, this);" onmousedown="$EDITORUI[&quot;edui105&quot;].Stateful_onMouseDown(event, this);" id="edui105_state" title="字号" class="edui-default"><div class="edui-combox-body edui-default"><div onclick="$EDITORUI[&quot;edui105&quot;]._onButtonClick(event, this);" class="edui-box edui-button-body edui-default" id="edui105_button_body">16px</div><div class="edui-box edui-splitborder edui-default"></div><div onclick="$EDITORUI[&quot;edui105&quot;]._onArrowClick();" class="edui-box edui-arrow edui-default"></div></div></div></div></li>
+				<li class="li2"></li>
+				<li class="li3"></li>
+				<li class="li4"><div class="edui-box edui-button edui-for-superscript edui-default" id="edui14"><div onmouseout="$EDITORUI[&quot;edui14&quot;].Stateful_onMouseOut(event, this);" onmouseover="$EDITORUI[&quot;edui14&quot;].Stateful_onMouseOver(event, this);" onmouseup="$EDITORUI[&quot;edui14&quot;].Stateful_onMouseUp(event, this);" onmousedown="$EDITORUI[&quot;edui14&quot;].Stateful_onMouseDown(event, this);" id="edui14_state" class="edui-default"><div class="edui-button-wrap edui-default"><div onclick="return $EDITORUI[&quot;edui14&quot;]._onClick(event, this);" onmousedown="return $EDITORUI[&quot;edui14&quot;]._onMouseDown(event, this);" class="edui-button-body edui-default" title="上标" unselectable="on" id="edui14_body"><div class="edui-box edui-icon edui-default"></div></div></div></div></div></li>
+				<li class="li5"></li>
+				<li class="li6"></li>
+				<li class="li7"></li>
+				<li class="li8"></li>
+				<li class="li9"></li>
+				<li class="li10"><i></i></li>
+				<!-- 字体颜色下拉菜单 -->
+				<dl class="color_menu" name="字体颜色下拉菜单">
+					<dd class="dd1"><i></i><a>清除颜色</a></dd>
+					<dt>通用颜色</dt>
+					<dd class="dd2 _dd2"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></dd>
+					<dd class="dd2"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></dd>
+					<dd class="dd2"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></dd>
+					<dd class="dd2"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></dd>
+					<dd class="dd2"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></dd>
+					<dd class="dd2"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></dd>
+					<dt>标准颜色</dt>
+					<dd class="dd2 ddn"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></dd>
+				</dl>
+				<li class="li11"></li>			
+			</ul>
+			<h4>字体</h4>
+		</div>
+		<div name="段落" class="cbt_div cbt_div4">
+			<ul class="ul1">
+				<li class="li1"><i></i></li>
+				<!-- 编号下拉菜单 -->
+				<dl class="nub_menu" name='编号下拉菜单'><dd>○ 空心项目符号</dd><dd>● 实心项目符号</dd><dd>■ 方形项目符号</dd></dl>
+				<li class="li2"><i></i></li>
+				<li class="li3"><i></i></li>
+				<li class="li4"><i></i></li>
+			</ul>
+			<ul class="ul2">
+				<li class="li1"></li>
+				<li class="li2"></li>
+				<li class="li3"></li><li class="li4"></li><li class="li5"></li><li class="li6"></li>				
+				<img src="word/img/u_line.png" /><li class="li7"><i></i></li>
+			</ul>
+			<h4>段落</h4>
+		</div>
+		<div name="样式 " class="cbt_div cbt_div5">
+			<ul class="ul1">
+				<li><img src="word/img/font-style/style_01.png" /></li>
+				<li><img src="word/img/font-style/style_02.png" /></li>
+				<li><img src="word/img/font-style/style_03.png" /></li>
+				<li><img src="word/img/font-style/style_04.png" /></li>
+				<li><img src="word/img/font-style/style_05.png" /></li>
+				<li><img src="word/img/font-style/style_06.png" /></li>
+				<li><img src="word/img/font-style/style_07.png" /></li>
+				<li><img src="word/img/font-style/style_08.png" /></li>
+				<li><img src="word/img/font-style/style_09.png" /></li>
+				<li><img src="word/img/font-style/style_10.png" /></li>
+				<li><img src="word/img/font-style/style_11.png" /></li>
+				<li><img src="word/img/font-style/style_12.png" /></li>
+				<li><img src="word/img/font-style/style_13.png" /></li>
+				<li><img src="word/img/font-style/style_14.png" /></li>
+				<li><img src="word/img/font-style/style_15.png" /></li>
+				<li><img src="word/img/font-style/style_16.png" /></li>
+				<li><img src="word/img/font-style/style_17.png" /></li>
+				<li><img src="word/img/font-style/style_18.png" /></li>
+				<li><img src="word/img/font-style/style_19.png" /></li>
+				<li><img src="word/img/font-style/style_20.png" /></li>
+				<li><img src="word/img/font-style/style_21.png" /></li>
+				<li><img src="word/img/font-style/style_22.png" /></li>
+				<li><img src="word/img/font-style/style_23.png" /></li>
+				<li><img src="word/img/font-style/style_24.png" /></li>
+				<li><img src="word/img/font-style/style_25.png" /></li>
+				<li><img src="word/img/font-style/style_26.png" /></li>
+				<li><img src="word/img/font-style/style_27.png" /></li>
+				<li><img src="word/img/font-style/style_28.png" /></li>
+			</ul>
+			<ul class="ul2">
+				<li class="li1"></li><br>
+				<li class="li2"></li><br>
+				<li class="li3"></li>
+			</ul>
+			<h4>样式</h4>
+		</div>
+		<div name="编辑" class="cbt_div cbt_div6">
+			<ul>
+				<li class="li1"><i></i>查找</li>
+				<li class="li2"><i></i>替换</li>
+			</ul>
+			<h4>编辑</h4>
+		</div>
+		</div>
+		<!--插入----------------------------------------------------------------------------------------------------  -->
+		<div name="插入" class="insert_display tdisplay tdisplay2">
+		<div name="页" class="cbt_div cbt_div7">
+			<ul>
+				<li><img src="word/img/ye.png"><br>分页符</li>
+			</ul>
+			<h4>页</h4>
+		</div>
+		<div name="字符" class="cbt_div cbt_div8">
+			<ul>
+				<li><img src="word/img/zifu.png"><br>字符</li>
+			</ul>
+			<h4>页</h4>
+		</div>
+		<div name="链接" class="cbt_div cbt_div9">
+			<ul>
+				<li class="li1"><i></i>添加链接</li>
+				<li class="li2"><i></i>取消链接</li>
+			</ul>
+			<h4>链接</h4>
+		</div>
+		<div name="图片" class="cbt_div cbt_div10">
+			<ul class="ul3"><li><img src="word/img/image.png" /><br>图片</li></ul>
+			<ul class="ul1">
+				<li class="li1"><i></i>单图</li>
+				<li class="li2"><i></i>表情</li>				
+			</ul>
+			<ul class="ul2">
+				<li class="li1"><i></i>截图</li>
+				<li class="li2"><i></i>涂鸦</li>				
+			</ul>
+			<h4>图片</h4>
+		</div>
+		<div name="表格" class="cbt_div cbt_div11">
+			<ul>
+				<li><img src="word/img/inserttable.png"/><br>表格</li>
+			</ul>
+			<h4>表格</h4>
+		</div>
+		<div name="封面" class="cbt_div cbt_div12">
+			<ul>
+				<li><img src="word/img/fengmian.png"/><br>封面</li>
+			</ul>
+			<h4>封面</h4>
+		</div>
+		</div>
+		<!--表格----------------------------------------------------------------------------------------------------  -->
+		<div name="表格" class="table_display tdisplay tdisplay3">
+		<div name="表格" class="cbt_div cbt_div13">
+			<ul class="ul1"><li><img src="word/img/inserttable.png"><br>插入表格</li></ul>
+			<ul class="ul2"><li><img src="word/img/deletetable.png"><br>删除表格</li></ul>
+			<ul class="ul3"><li class="li1"></li><li class="li2"></li></ul><br/>
+			<ul class="ul4"><li class="li1"></li><li class="li2"></li></ul>
+			<h4>表格</h4>
+		</div>
+		<div name="合并单元格" class="cbt_div cbt_div14">
+			<ul class="ul1"><li class="li1"></li><li class="li2"></li><li class="li3"></li></ul><br>
+			<ul class="ul2"><li class="li1"></li><li class="li2"></li><li class="li3"></li></ul>
+			<h4>合并单元格</h4>
+		</div>		
+		</div>
+		<!--视图----------------------------------------------------------------------------------------------------  -->
+		<div name="视图" class="view_display tdisplay tdisplay4">
+		<div name="大纲区" class="cbt_div cbt_div15">
+			<ul>
+				<li><img src="word/img/view1.png"><br>显示\隐藏</li>
+			</ul>
+			<h4>大纲区</h4>
+		</div>
+		<div name="新闻区" class="cbt_div cbt_div16">
+			<ul>
+				<li><img src="word/img/view2.png"><br>显示\隐藏</li>
+			</ul>
+			<h4>新闻区</h4>
+		</div>		
+		</div>
+		<!--设置----------------------------------------------------------------------------------------------------  -->
+		<div name="设置" class="set_display tdisplay tdisplay5">
+		<div name="属性设置" class="cbt_div cbt_div17">
+			<ul>
+				<li class="li1"><img src="word/img/set1.png"><br>显示\隐藏</li>
+				<li><img src="word/img/set2.png"><br>显示\隐藏</li>
+			</ul>
+			<h4>属性设置</h4>
+		</div>
+		<div name="字数统计" class="cbt_div cbt_div18">
+			<ul>
+				<li><img src="word/img/wordcount.png"><br>字数统计</li>
+			</ul>
+			<h4>字数统计</h4>
+		</div>
+		<div name="打印" class="cbt_div cbt_div19">
+			<ul>
+				<li><img src="word/img/print.png"><br>打印</li>
+			</ul>
+			<h4>打印</h4>
+		</div>		
+		</div>
+	</div>
+	
+	
+	
+	<!-- 编辑区域 -->
+	<div name="编辑区" class="edit_body">
+		<div class="iframe_body" id="ifame_bo">
+			<script id="editor" type="text/plain" style="width:900px;height:500px;"></script>
+			<iframe id="eiframe"  width="100%" height="100%" frameborder="0" src="edit.html">
+			</iframe>
+		</div>	
+	</div>
+	<!-- 编辑区域 -->
+	<div name="左边栏" class="l_listbox list_bar">
+		<div class="llist_div1">
+			<ul class="ul">
+				<li class="li_last"><img src="word/img/llist_5.png" /></li>
+				<li><img src="word/img/llist_4.png" /></li>
+				<li><img src="word/img/llist_3.png" /></li>
+				<li><img src="word/img/llist_2.png" /></li>
+				<li><img class="direct" src="word/img/llist_1.png" /></li>
+			</ul>						
+		</div>
+		<div name="右边框" class="llist_div2">
+			<img class="direct" src="word/img/llist_d.png" />
+		</div>
+		<div name="树形标题" class="tree_list">
+			<ul>
+				<li class="tree1" name="一级"><img src="word/img/tree2.png" /><img src="word/img/tree1.png" />封面</li>
+				<li class="tree1" name="一级带下拉菜单"><img src="word/img/tree3.png" /><img src="word/img/tree1.png" />键入标题</li>
+				<li class="tree4" name="四级"><img src="word/img/tree2.png" /><img src="word/img/tree1.png" />键入标题</li>
+				<li class="tree4" name="四级带下拉菜单"><img src="word/img/tree3.png" /><img src="word/img/tree1.png" />键入标题</li>
+				<li class="tree2" name="二级"><img src="word/img/tree2.png" /><img src="word/img/tree1.png" />键入标题</li>
+				<li class="tree2" name="二级带下拉菜单"><img src="word/img/tree3.png" /><img src="word/img/tree1.png" />键入标题</li>
+				<li class="tree4" name="四级"><img src="word/img/tree2.png" /><img src="word/img/tree1.png" />键入标题</li>
+				<li class="tree4" name="四级带下拉菜单"><img src="word/img/tree3.png" /><img src="word/img/tree1.png" />键入标题</li>
+				<li class="tree3" name="三级"><img src="word/img/tree2.png" /><img src="word/img/tree1.png" />键入标题</li>
+				<li class="tree3" name="三级带下拉菜单"><img src="word/img/tree3.png" /><img src="word/img/tree1.png" />键入标题</li>
+				<li class="tree4" name="四级"><img src="word/img/tree2.png" /><img src="word/img/tree1.png" />键入标题</li>
+				<li class="tree4" name="四级带下拉菜单"><img src="word/img/tree3.png" /><img src="word/img/tree1.png" />键入标题</li>
+				<li class="tree2" name="二级"><img src="word/img/tree2.png" /><img src="word/img/tree1.png" />键入标题</li>
+				<li class="tree2" name="二级带下拉菜单"><img src="word/img/tree3.png" /><img src="word/img/tree1.png" />键入标题</li>
+			</ul>
+		</div>
+	</div>
+	<div name="显示左边栏" class="llist_show list_show">
+		<img src="word/img/rlist_1.png" />
+	</div>
+	<div name="右边栏" class="r_listbox list_bar">		
+		<div class="rlist_div1">			
+			<ul class="ul">
+				<h3>新闻列表区</h3>
+				<li class="li_last"><img src="word/img/llist_5.png" /></li>
+				<li><img class="direct" src="word/img/rlist_1.png" /></li>
+			</ul>						
+		</div>
+		<div class="list_tp" name="列表头部">
+			<ul class="ul">
+				<li>新闻</li><li>文档</li><li>插件</li>
+			</ul>
+			<div class="div">
+				<input type="text"  /><a class="a1">搜索</a><a class="a2">高级搜索</a>
+			</div>
+			<div name="搜索提示" class="ser_tip">
+				<span class="s1">找到相关新闻591888篇</span><span class="s2">按焦点排序<img src="word/img/t_down.png" /></span>
+			</div>
+		</div>
+		<!-- 新闻 -->
+		<div name="全部新闻和猜你喜欢" class="news_like">
+			<a class="a1 an">全部新闻</a><a class="a2 an">猜你喜欢</a>
+			<div name="全部新闻" class="news_div lan an1">
+				<!-- 循环项 -->
+				<ul class="ul">
+					<li><img src="word/img/box_i.png" /> 美国2架F18战机因机械故障迫降台南机场（图）</li><li class="li2"><img src="word/img/list_o.png"/> 1小时前  2015-04-01</li>
+				</ul>
+				<!-- 循环 -->
+				<ul class="ul">
+					<li><img src="word/img/box_i.png" /> 美国2架F18战机因机械故障迫降台南机场（图）</li><li class="li2"><img src="word/img/list_o.png"/> 1小时前  2015-04-01</li>
+				</ul>
+				<ul class="ul">
+					<li><img src="word/img/box_i.png" /> 美国2架F18战机因机械故障迫降台南机场（图）</li><li class="li2"><img src="word/img/list_o.png"/> 1小时前  2015-04-01</li>
+				</ul>
+				<ul class="ul">
+					<li><img src="word/img/box_i.png" /> 美国2架F18战机因机械故障迫降台南机场（图）</li><li class="li2"><img src="word/img/list_o.png"/> 1小时前  2015-04-01</li>
+				</ul>
+				<ul class="ul">
+					<li><img src="word/img/box_i.png" /> 美国2架F18战机因机械故障迫降台南机场（图）</li><li class="li2"><img src="word/img/list_o.png"/> 1小时前  2015-04-01</li>
+				</ul>
+				<ul class="ul">
+					<li><img src="word/img/box_i.png" /> 美国2架F18战机因机械故障迫降台南机场（图）</li><li class="li2"><img src="word/img/list_o.png"/> 1小时前  2015-04-01</li>
+				</ul>
+				<ul class="ul">
+					<li><img src="word/img/box_i.png" /> 美国2架F18战机因机械故障迫降台南机场（图）</li><li class="li2"><img src="word/img/list_o.png"/> 1小时前  2015-04-01</li>
+				</ul>
+				<ul class="ul">
+					<li><img src="word/img/box_i.png" /> 美国2架F18战机因机械故障迫降台南机场（图）</li><li class="li2"><img src="word/img/list_o.png"/> 1小时前  2015-04-01</li>
+				</ul>				
+			</div>
+			<div name="猜你喜欢" class="like_div lan an2">
+				<!-- 循环项 -->
+				<ul class="ul">
+					<li>2<img src="word/img/box_i.png" /> 美国2架F18战机因机械故障迫降台南机场（图）</li><li class="li2"><img src="word/img/list_o.png"/> 1小时前  2015-04-01</li>
+				</ul>
+				<!-- 循环 -->
+				<ul class="ul">
+					<li><img src="word/img/box_i.png" /> 美国2架F18战机因机械故障迫降台南机场（图）</li><li class="li2"><img src="word/img/list_o.png"/> 1小时前  2015-04-01</li>
+				</ul>
+				<ul class="ul">
+					<li><img src="word/img/box_i.png" /> 美国2架F18战机因机械故障迫降台南机场（图）</li><li class="li2"><img src="word/img/list_o.png"/> 1小时前  2015-04-01</li>
+				</ul>
+				<ul class="ul">
+					<li><img src="word/img/box_i.png" /> 美国2架F18战机因机械故障迫降台南机场（图）</li><li class="li2"><img src="word/img/list_o.png"/> 1小时前  2015-04-01</li>
+				</ul>
+				<ul class="ul">
+					<li><img src="word/img/box_i.png" /> 美国2架F18战机因机械故障迫降台南机场（图）</li><li class="li2"><img src="word/img/list_o.png"/> 1小时前  2015-04-01</li>
+				</ul>
+				<ul class="ul">
+					<li><img src="word/img/box_i.png" /> 美国2架F18战机因机械故障迫降台南机场（图）</li><li class="li2"><img src="word/img/list_o.png"/> 1小时前  2015-04-01</li>
+				</ul>
+				<ul class="ul">
+					<li><img src="word/img/box_i.png" /> 美国2架F18战机因机械故障迫降台南机场（图）</li><li class="li2"><img src="word/img/list_o.png"/> 1小时前  2015-04-01</li>
+				</ul>
+				<ul class="ul">
+					<li><img src="word/img/box_i.png" /> 美国2架F18战机因机械故障迫降台南机场（图）</li><li class="li2"><img src="word/img/list_o.png"/> 1小时前  2015-04-01</li>
+				</ul>				
+			</div>
+			<ul name="列表" class="n_list">
+				<li class="l1"><上一页</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li class="l_last">下一页></li>
+			</ul>
+		<!-- 	<div name="猜你喜欢">
+				
+			</div> -->
+		</div>
+		
+		<div name="左边框" class="rlist_div2">
+			<img class="direct" src="word/img/llist_r.png" />
+		</div>		
+	</div>
+	<div name="显示右边栏" class="rlist_show list_show">
+		<img src="word/img/llist_1.png" />
+	</div>
+	<!-----------弹出框--------------------------------------------------------------------------------------------------------------------->
+	<div name="遮挡背景" class="ui_back"></div>
+	
+	
+	
+	
+	<!-----------end--------------------------------------------------------------------------------------------------------------------->
+	
+<script type="text/javascript">
+var ue = UE.getEditor('editor');
+</script>
+</body>	
+</html>	

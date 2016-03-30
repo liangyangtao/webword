@@ -1,0 +1,283 @@
+@charset "UTF-8";
+/*-------  变量 --------*/
+/*-------  class --------*/
+body, .bgWhite {
+  background-color: #fff; }
+
+.mainBg {
+  background-color: #32353c; }
+
+.w1100 {
+  width: 1100px;
+  margin: 0 auto; }
+
+.w370 {
+  width: 362px; }
+
+.w340 {
+  width: 330px; }
+.handShape{
+	cursor: pointer;
+}
+.arrowShape{
+	cursor:default;
+}
+.threeHover {
+  color: #17ae33; }
+
+.padl30 {
+  padding-left: 30px; }
+
+.padl44 {
+  padding-left: 44px; }
+
+.padl42 {
+  padding-left: 42px; }
+
+.padl14 {
+  padding-left: 14px; }
+
+.marl30 {
+  margin-left: 30px; }
+
+.marl44 {
+  margin-left: 44px; }
+
+.marr20 {
+  margin-left: 20px; }
+
+.marr60 {
+  margin-right: 60px; }
+
+.marb27 {
+  margin-bottom: 27px; }
+
+/*-------  函数 --------*/
+/*  公共的模块  */
+.reportTop {
+  background-color: #333;
+  height: 40px;
+  line-height: 40px; }
+  .reportTop span {
+    font: 20px/20px "微软雅黑";
+    color: white;
+    display: inline-block;
+    vertical-align: middle; }
+  .reportTop i {
+    font-size: 14px;
+    color: #fff;
+    background-color: #15af33;
+    font-family: FZLTHTW,'微软雅黑';
+    padding: 0 8px;
+    display: inline-block;
+    margin-left: 7px;
+    font-style: normal;
+    height: 24px;
+    line-height: 24px;
+    vertical-align: middle; }
+
+.fst14 {
+  font: 14px/24px "宋体";
+  color: black; }
+
+.show {
+  display: block; }
+
+.hide {
+  display: none; }
+  
+  /* 用户登录 密码修改与退出*/
+    .login_uer{
+       background:#898480;
+       margin-top:23px;
+       position: relative;
+    }
+    .loginlist{
+      background:#333;
+       margin-top:5px;
+       margin-right: 50px;
+    }
+    .login_uer .uerName .wel, .login_uer .uerName a, .login_uer dd a{
+      height: 30px;color:#fff;font:16px/30px '微软雅黑';
+    }
+    .login_uer .uerName a:hover, .login_uer dd a:hover{color:#fff100;}
+    .login_uer .uerName .wel{
+      float: left;
+      padding-right: 8px;
+    }
+    .yonghuShow{float:left;}
+    .uerName a{
+      float:left;
+      cursor: pointer;
+    }
+    .uerName i{
+      cursor: pointer;
+       float:left;
+       width: 8px;
+       height: 30px;
+       margin-left:0;
+       padding-left: 10px;
+       background:url(../images/sj.png) no-repeat center center; 
+    }
+    .login_uer dd{
+       height: 70px;
+      /*padding-left:20%;*/
+      display:none;
+      position: absolute;
+      z-index: 999;
+      width: 92px;
+      left: 30px;
+      padding-left: 10px;
+      top: 35px;
+    }
+    .login_uer  .index{
+      background-color: #8b8681;
+    }
+    .login_uer .list{
+      background-color: #333;
+    }
+    .login_uer dd a{
+     display:block;
+    }
+  /* 修改密码与退出 */
+.disk{
+    background-color: #000;
+    opacity: .5;
+    filter:alpha(opacity=50);
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+  .com_box{
+    background-color: #fff;
+    position: absolute;
+    z-index: 99999;
+    border: 1px solid #1f97cc;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .is_out{
+    width: 294px;
+    height: 196px;
+    display: none;
+    /*top: 50%;
+    left: 50%;
+    margin-left: -147px;
+    margin-top: -98px;*/
+  }
+  .is_out .title{
+    height: 113px;
+    border-bottom: 1px solid #b3b3b3;
+    font:16px/1 "宋体";
+    color: #145b9b;
+    font-weight: bold;
+    line-height: 113px;
+    text-align: center;
+  }
+  .out_btn{
+    margin-top: 17px;
+  }
+
+  
+  .pop_box{
+    display: none;
+    width: 414px;
+    height: 310px;
+    left: 0;
+    top: 0;
+    /*top: 50%;
+    left: 50%;
+    margin-left: -207px;
+    margin-top: -155px;*/
+  }
+  .pop_box .title{
+    height: 46px;
+    background-color: #e2f2ff;
+    border-bottom: 1px solid #b3b3b3;
+  }
+  .pop_box .title .modify{
+    float: left;
+    color: #145b9b;
+    font:14px/1 "微软雅黑";
+    margin:18px 0 0 20px;
+    font-weight: bold;
+  }
+  .pop_box .title .close_btn{
+    float: right;
+    margin:14px 30px 0 0;
+    width: 22px;
+    height: 22px;
+    background: url(../images/close.png) no-repeat;
+    border:none; 
+    outline: none;
+  }
+  .pop_box .password_box{
+    background-color: #fff;
+    margin-left: 50px;
+    padding:30px 0 6px 0;
+  }
+  .pop_box .pass_bar{
+    margin-bottom: 24px;
+    height: 30px;
+  }
+  .errrormind{
+   color:#f00;
+   font-size:12px;
+   margin-left:89px;
+  } 
+  .pop_box .pass_bar .pass_text{
+    text-align: right;
+    display: inline-block;
+    width: 74px;
+    font:16px/30px "宋体";
+    color: #8d8d8d;
+    font-weight: bold;
+  }
+  .pop_box .pass_bar input{
+    border-radius: 4px;
+    margin-left: 15px;
+    padding:0 5px;
+    width: 210px;
+    height: 26px;
+    line-height: 26px\9;
+    background-color: #f5fbfe;
+    border: 1px solid #cacaca;
+  }
+  .pop_box .pass_bar input:focus{
+    border: 1px solid #96C7EF;
+  }
+  .popis_submit{
+    text-align: center;
+  }
+  .popis_submit a{
+    display: inline-block;
+    width: 86px;
+    height: 36px;
+    background-image: url(../images/popbtn.png);
+    text-decoration: none;
+    line-height: 36px;
+    font-size:16px;
+    font-family: "微软雅黑";
+    color: #fff;
+  }
+  .pass_tj{
+    margin-right: 83px;
+  }
+  .out_tj{
+    margin-right: 30px;
+  }
+  .popis_submit .confirm{
+    background-position: 0 0;
+    
+  }
+  .popis_submit .cancle{
+    background-position: -86px 0;
+  }
+  #pwEr{
+    display:block;
+	color:red;
+	margin-bottom:10px;
+}

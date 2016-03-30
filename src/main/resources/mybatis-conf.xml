@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!-- 这是Mybatis的配置文件， 这个配置文件将会影响到Mybatis的属性。 -->
+<configuration>
+
+	<!-- 映射实体的别名的 -->
+    <typeAliases>
+    <package name="com.database.bean"/>
+<!--      
+    	<typeAlias type="com.unbank.domain.AreaBean"				alias="AreaBean"/>
+-->     
+    </typeAliases>
+    
+    <!-- 映射配置文件的。 -->
+    <mappers>
+<!--     
+    	<mapper resource="com/unbank/mybatis/AreaMapper.xml"/>
+-->
+    </mappers>
+</configuration>

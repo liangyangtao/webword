@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- base href="http://10.21.8.14:8080/webword/" -->
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>知识创享网-支付成功</title>
+<link rel="stylesheet" type="text/css" href="../../common/css/cxcss/base.css">
+<link rel="stylesheet" type="text/css" href="../../common/css/cxcss/index.css">
+</head>
+<body>
+<!-- header -->
+<div name="header" class="header">
+	<div class="bg">
+		<span class="h_left"><a href="view/index.do">首页</a> <span>|</span>
+			<a>客户端</a> <span>|</span> 客服热线：010-63368810</span> <span class="h_right">您好，欢迎来到知识创享网！
+			<c:if test="${user!=null}">
+				<a style="display:" href="user/journal.do" class='username'
+					onMouseOver="showHeadUl();">花因寒香</a>
+				<a class="shop_car" id="topShopCar" href="javascript:;">购物车<span>（241）</span></a>	
+			</c:if> <c:if test="${user==null}">
+				<a style="display:" href="javascript:;" onClick="showDiv(1);">请登录</a>
+			</c:if> </span>
+		<c:if test="${user!=null}">
+			<ul class="hideUl" onMouseLeave="hideHeadUl();"
+				onClick="hideHeadUl();">
+				<li class="line"><a href="user/journal.do">个人中心</a>
+				</li>
+				<li class="line"><a href="###">我的账户</a>
+				</li>
+				<li><a href="javascript:;" onClick="showDiv(0);">退出</a>
+				</li>
+			</ul>
+		</c:if>
+	</div>
+</div>
+<div name="header2" class="header2">
+	<a href="view/home.do"><img class="logo img"
+		src="../../common/img/cximg/header1.png" />
+	</a>
+	<ul class="ul">
+		<li class="li1" style="display:none"><a
+			<c:if test="${'template' != type}">class="current" </c:if>
+			name="document">文档</a> <a
+			<c:if test="${'template' == type}">class="current"</c:if>
+			name="template">模板</a>
+		</li>
+		<li class="li2"><input class="search_input" type="text"
+			value="" placeholder="请输入要查找的内容"
+			onfocus="this.placeholder=''"
+			onblur="if(this.value==''){this.placeholder='请输入要查找的内容'}" /> <span><a
+				class="search">搜&nbsp;&nbsp;索</a>
+		</span></li>
+		<li class="li3" style="display:;"><input class="input1"
+			type="radio" name="articleFormat" checked="checked" id="all" value="all" /> 全部 <input
+			type="radio" name="articleFormat" id="doc" value="doc"/> DOC <input type="radio" name="articleFormat" id="ppt" value="ppt"/>
+			PPT <!-- <input type="radio" name="radio1" /> TXT --> <input type="radio"
+			name="articleFormat" id="pdf" value="pdf"/> PDF <!-- <input type="radio" name="radio1" /> XLS -->
+			<script type="text/javascript">
+				var articleFormat="${articleFormat}";
+				if(articleFormat){		
+					document.getElementById('all').checked=false;
+					document.getElementById(articleFormat).checked=true;
+				}
+			</script>
+			&nbsp;&nbsp;|<span><script type="text/javascript">				
+						var searchType="${searchType}";
+						if(searchType=="content"){
+							a="按全文搜索";
+						}else{
+							a="按标题搜索";
+						}
+						document.write(a);					
+				</script></span><em></em>
+		</li>
+	</ul>
+	<ul id="searchType" class="hideUl"><span class="icon"></span>
+		<li id="title" onclick='liclick(this)'>按标题搜索</li>
+		<li id="content" onclick='liclick(this)'>按全文搜索</li>
+	</ul>
+	<ul class="tabUl">
+		<li class="current">文档</li>
+		<li>新闻</li>
+		<li>数据</li>
+		<li>视频</li>
+	</ul>
+	<a href="wordNew.do" onclick="return isLogin();" target="_blank"><img
+		class="upload img" src="../../common/img/cximg/header3.png" />
+	</a>
+</div>
+<div name="菜单" class="menu">
+	<div class="menu_bg">
+		<a class="a0" href="view/home.do">首页</a>
+		<c:forEach items="${list}" var="plate" varStatus="status">
+    		<a class="a1 <c:if test="${plateId==plate.plateId or (not empty pid and pid.pid==plate.plateId)}">current</c:if>" href="view/plate.do?plateId=${plate.plateId}" >${plate.plateName}</a>  
+		</c:forEach>
+		<!-- 
+		<a class="a1 " href="view/plate.do?plateId=374">农业农业农业</a> <a
+			class="a2 " href="view/plate.do?plateId=395">工业</a> <a class="a3 "
+			href="view/plate.do?plateId=396">商业</a> <a class="a4 "
+			href="view/plate.do?plateId=397">银行</a> <a class="a5 "
+			href="view/plate.do?plateId=394">农业</a> <a class="a6 "
+			href="view/plate.do?plateId=395">工业</a> <a class="a7 "
+			href="view/plate.do?plateId=396">商业</a> <a class="a8 "
+			href="view/plate.do?plateId=397">银行</a> <a class="a9"
+			href="global/myPlateEdit.do" onclick="return isLogin();"><img
+			class="add" src="word/img/cximg/add.png" />
+		</a> -->
+		<a class="a9"
+			href="global/myPlateEdit.do" onclick="return isLogin();"><img
+			class="add" src="../../common/img/cximg/add.png" /></a>
+	</div>
+
+	<div class="second_menuBg"><ul class="second_menu">
+	<!--
+		<li><a href="javascript">农业</a><a href="javascript">农业</a><a href="javascript">农业</a>
+		</li>
+		-->
+		<c:forEach items="${list}" var="plate" varStatus="status">
+		<li><p>
+			<c:forEach items="${plate.subs}" var="sub"  varStatus="status1">
+				<a href="view/plate.do?plateId=${sub.plateId}">${sub.plateName}</a>
+			</c:forEach></p>
+		</li>
+		</c:forEach>		
+	</ul></div>
+</div>
+<!-- header -->
+<!-- body -->
+<div class="paySuccess">
+    <dl>
+        <dt><img src="../../common/img/cximg/pay_success.png"></dt>
+        <dd>
+            支付成功！已支付<span>2000</span>创享币！
+        </dd>
+    </dl>
+</div>
+<div class="body_div2_b" name="区域1底部">
+    <h3 class="alsoBuy">购买该文档的用户还购买了</h3>
+    <ul class="lastArea">
+        <li>
+            <div> <a title="银行经营管理日报" href="view/preview.do?journalId=29" target="_blank"><img src="upload/1448241547196.png"></a><span class="icon icon1"><em>日刊</em> </span>
+                <p class="time" style="line-height: 24px; top: 170px;"> <span>更新2015-12-14</span> </p>
+            </div>
+            <h5> <a href="view/preview.do?journalId=29" target="_blank" title="银行经营管理日报">银行经营管理日报</a> </h5>
+        </li>
+        <li>
+            <div> <a title="部委动态每日汇编" href="view/preview.do?journalId=23" target="_blank"><img src="upload/1448240895583.jpg"></a><span class="icon icon1"><em>日刊</em> </span>
+                <p class="time"> <span>更新2015-12-14</span> </p>
+            </div>
+            <h5> <a href="view/preview.do?journalId=23" target="_blank" title="部委动态每日汇编">部委动态每日汇编</a> </h5>
+        </li>
+        <li>
+            <div> <a title="经济热点聚焦" href="view/preview.do?journalId=28" target="_blank"><img src="upload/1448241329342.png"></a><span class="icon icon1"><em>日刊</em> </span>
+                <p class="time"> <span>更新
+						2015-12-14</span> </p>
+            </div>
+            <h5> <a href="view/preview.do?journalId=28" target="_blank" title="经济热点聚焦">经济热点聚焦</a> </h5>
+        </li>
+        <li>
+            <div> <a title="银行高管动态" href="view/preview.do?journalId=160" target="_blank"><img src="upload/1448348466846.jpg"></a><span class="icon icon1"><em>周刊</em> </span>
+                <p class="time"> <span>更新2015-12-14</span> </p>
+            </div>
+            <h5> <a href="view/preview.do?journalId=160" target="_blank" title="银行高管动态">银行高管动态</a> </h5>
+        </li>
+        <li>
+            <div> <a title="每日动态" href="view/preview.do?journalId=30" target="_blank"><img src="upload/1448242175159.jpg"></a><span class="icon icon1"><em>日刊</em> </span>
+                <p class="time"> <span>更新2015-12-14</span> </p>
+            </div>
+            <h5> <a href="view/preview.do?journalId=30" target="_blank" title="每日动态">每日动态</a> </h5>
+        </li>
+        <li style="margin-right: 0px;">
+            <div> <a title="每日财经要参" href="view/preview.do?journalId=27" target="_blank"><img src="upload/1448241320964.jpg"></a><span class="icon icon1"><em>日刊</em> </span>
+                <p class="time"> <span>更新2015-12-14</span> </p>
+            </div>
+            <h5> <a href="view/preview.do?journalId=27" target="_blank" title="每日财经要参">每日财经要参</a> </h5>
+        </li>
+        <li>
+            <div> <a title="拟在建项目数据周报" href="view/preview.do?journalId=25" target="_blank"><img src="upload/1448241075482.jpg"></a><span class="icon icon1"><em>周刊</em> </span>
+                <p class="time" style="line-height: 24px; top: 170px;"> <span>更新2015-12-14</span> </p>
+            </div>
+            <h5> <a href="view/preview.do?journalId=25" target="_blank" title="拟在建项目数据周报">拟在建项目数据周报</a> </h5>
+        </li>
+        <li>
+            <div> <a title="互联网金融日报" href="view/preview.do?journalId=24" target="_blank"><img src="upload/1448240957749.jpg"></a><span class="icon icon1"><em>日刊</em> </span>
+                <p class="time"> <span>更新2015-12-14</span> </p>
+            </div>
+            <h5> <a href="view/preview.do?journalId=24" target="_blank" title="互联网金融日报">互联网金融日报</a> </h5>
+        </li>
+        <li>
+            <div> <a title="每日行业聚焦" href="view/preview.do?journalId=162" target="_blank"><img src="upload/1448357254716.png"></a><span class="icon icon1"><em>日刊</em> </span>
+                <p class="time"> <span>更新2015-12-11</span> </p>
+            </div>
+            <h5> <a href="view/preview.do?journalId=162" target="_blank" title="每日行业聚焦">每日行业聚焦</a> </h5>
+        </li>
+        <li>
+            <div> <a title="财务顾问咨询每周热点" href="view/preview.do?journalId=129" target="_blank"><img src="upload/1448331821069.jpg"></a><span class="icon icon1"><em>周刊</em> </span>
+                <p class="time"> <span>更新2015-12-11</span> </p>
+            </div>
+            <h5> <a href="view/preview.do?journalId=129" target="_blank" title="财务顾问咨询每周热点">财务顾问咨询每周热点</a> </h5>
+        </li>
+        <li>
+            <div> <a title="金融监管政策周刊" href="view/preview.do?journalId=124" target="_blank"><img src="upload/1448331448119.jpg"></a><span class="icon icon1"><em>周刊</em> </span>
+                <p class="time"> <span>更新2015-12-11</span> </p>
+            </div>
+            <h5> <a href="view/preview.do?journalId=124" target="_blank" title="金融监管政策周刊">金融监管政策周刊</a> </h5>
+        </li>
+        <li style="margin-right: 0px;">
+            <div> <a title="小微金融情报资讯半月刊" href="view/preview.do?journalId=142" target="_blank"><img src="upload/1448332764697.jpg"></a><span class="icon icon1"><em>半月刊</em> </span>
+                <p class="time"> <span>更新2015-12-11</span> </p>
+            </div>
+            <h5> <a href="view/preview.do?journalId=142" target="_blank" title="小微金融情报资讯半月刊">小微金融情报资讯半月刊</a> </h5>
+        </li>
+    </ul>
+    <div class="lastArea2">
+        <ul>        
+            <li>
+                <p><em class="middot"></em> <span class="ic-h ic-h-"></span> <a href="view/preview.do?articleId=13050" target="_blank" title="平安银行小微企业贷款引领者"> 平安银行小微企业贷款引领者</a> </p>
+                <a href="view/preview.do?articleId=13050" target="_blank" title="平安银行小微企业贷款引领者"><h5>2015-12-11</h5></a>
+            </li>
+            <li>
+                <p><em class="middot"></em> <span class="ic-h ic-h-"></span> <a href="view/preview.do?articleId=13050" target="_blank" title="平安银行小微企业贷款引领者"> 平安银行小微企业贷款引领者</a> </p>
+                <a href="view/preview.do?articleId=13050" target="_blank" title="平安银行小微企业贷款引领者"><h5>2015-12-11</h5></a>
+            </li>
+            <li>
+                <p><em class="middot"></em> <span class="ic-h ic-h-"></span> <a href="view/preview.do?articleId=13050" target="_blank" title="平安银行小微企业贷款引领者"> 平安银行小微企业贷款引领者</a> </p>
+                <a href="view/preview.do?articleId=13050" target="_blank" title="平安银行小微企业贷款引领者"><h5>2015-12-11</h5></a>
+            </li>
+            <li>
+                <p><em class="middot"></em> <span class="ic-h ic-h-"></span> <a href="view/preview.do?articleId=13050" target="_blank" title="平安银行小微企业贷款引领者"> 平安银行小微企业贷款引领者</a> </p>
+                <a href="view/preview.do?articleId=13050" target="_blank" title="平安银行小微企业贷款引领者"><h5>2015-12-11</h5></a>
+            </li>
+            <li>
+                <p><em class="middot"></em> <span class="ic-h ic-h-"></span> <a href="view/preview.do?articleId=13050" target="_blank" title="平安银行小微企业贷款引领者"> 平安银行小微企业贷款引领者</a> </p>
+                <a href="view/preview.do?articleId=13050" target="_blank" title="平安银行小微企业贷款引领者"><h5>2015-12-11</h5></a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p><em class="middot"></em> <span class="ic-h ic-h-"></span> <a href="view/preview.do?articleId=13051" target="_blank" title="飞科股份股权解除质押"> 飞科股份股权解除质押</a> </p>
+                <a href="view/preview.do?articleId=13050" target="_blank" title="平安银行小微企业贷款引领者"><h5>2015-12-11</h5></a>
+            </li>
+         	<li>
+                <p><em class="middot"></em> <span class="ic-h ic-h-"></span> <a href="view/preview.do?articleId=13050" target="_blank" title="平安银行小微企业贷款引领者"> 平安银行小微企业贷款引领者</a> </p>
+                <a href="view/preview.do?articleId=13050" target="_blank" title="平安银行小微企业贷款引领者"><h5>2015-12-11</h5></a>
+            </li>
+            <li>
+                <p><em class="middot"></em> <span class="ic-h ic-h-"></span> <a href="view/preview.do?articleId=13050" target="_blank" title="平安银行小微企业贷款引领者"> 平安银行小微企业贷款引领者</a> </p>
+                <a href="view/preview.do?articleId=13050" target="_blank" title="平安银行小微企业贷款引领者"><h5>2015-12-11</h5></a>
+            </li>
+            <li>
+                <p><em class="middot"></em> <span class="ic-h ic-h-"></span> <a href="view/preview.do?articleId=13050" target="_blank" title="平安银行小微企业贷款引领者"> 平安银行小微企业贷款引领者</a> </p>
+                <a href="view/preview.do?articleId=13050" target="_blank" title="平安银行小微企业贷款引领者"><h5>2015-12-11</h5></a>
+            </li>
+            <li>
+                <p><em class="middot"></em> <span class="ic-h ic-h-"></span> <a href="view/preview.do?articleId=13050" target="_blank" title="平安银行小微企业贷款引领者"> 平安银行小微企业贷款引领者</a> </p>
+                <a href="view/preview.do?articleId=13050" target="_blank" title="平安银行小微企业贷款引领者"><h5>2015-12-11</h5></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- body_end --> 
+<!-- footer --> 
+<div name="footer" class="footer">
+    <div class="foot1"><ul class="ul">
+            <li>关于我们</li>
+            <li>收藏网站</li>
+            <li>管理账户</li>
+            <li>联系我们</li>
+            <li>网站公告</li>
+        </ul>友情链接： <a class="a1">银行联合信息网</a><a class="a1">北京百课萃管理咨询有限责任公司</a><a class="a1">知识创享平台官方微信</a>
+       
+    </div>
+    <div class="foot2"> 客服电话：010-63368810（工作日9:30-17:30） </div>
+    <div class="foot3">
+        <p class="p1">地址：北京市西城区广安门外大街248号机械大厦1709   邮箱：ylxkf@unbank.info<br>
+        </p>
+        <p class="p2">北京银联信投资顾问有限责任公司 版权所有 京ICP备 05058919号
+<br>Copyright 2009, All right reserved.</p>
+    </div>
+</div>
+<!-- footer --> 
+<script type="text/javascript" src="../../common/js/jquery-1.8.3.min.js"></script> 
+<script type="text/javascript" src="../../common/js/cxjs/login.js"></script> 
+</body>
+</html>

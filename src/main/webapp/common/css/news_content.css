@@ -1,0 +1,35 @@
+﻿/*  */
+.direct{width:1000px;height:45px;line-height:45px;margin:0 auto;font-size:14px;color:#999999;}
+.direct a.d{color:#505767;margin:0 7px;}
+.direct a.s{color:#1369c0;margin:0 7px;}
+
+.content{width:1000px;margin:0 auto;overflow:hidden;margin-bottom:50px;min-height:650px;}
+.content .left{display:inline;float:left;padding:30px 20px;width:660px;border:1px solid #e4e4e4;}
+.content  h4.title{display:block;font-size:24px;color:#333333;text-align:center;margin-top:12px;line-height:54px;}
+.content  .message{height:42px;line-height:42px;border-bottom:1px solid #e5e5e5;font-size:12px;color:#666666;text-align:center;}
+.content  .message  .color{color:#1369c0;}
+.content  .message  .color2{color:#df193b;}
+.content  .message  .from{padding-left: 15px;}
+.content  .t_content{color:#666666;line-height:30px;margin:15px 2px;}
+.content  .share a{vertical-align:middle;}
+.content  .share  .collection{display:inline-block;width:80px;text-align:right;vertical-align:top;}
+.content  .share  .collection i{margin-left:3px;display:inline-block;vertical-align:middle;width:18px;height:16px;background:url('../img/cloc2.png') no-repeat center center;}
+.content  .share  .collection.active  i{background:url('../img/cloc1.png') no-repeat center center;}
+.content  .share  .collection.active  span.hidden{display:none;}
+
+.content .right{display:inline;float:right;padding:10px 15px;width:236px;border:1px solid #e4e4e4;}
+.content .right  h4.r_title{margin-bottom:10px;font-size:20px;color:#505767;line-height:35px;border-bottom:2px solid #e6e6e6;}
+.content .right  h4.r_title  a{display:inline-block;border-bottom:2px solid #1369c0;margin-bottom:-2px;}
+.content .right  ul.list{color:#252525;font-size:14px;}
+.content .right  ul.list  li{cursor:pointer;display:inline-block;height:32px;line-height:32px;clear:both;width:233px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.content .right  ul.list  li  a:hover{text-decoration:underline;color:#cc0000;}
+.content .right  ul.list  li  i{margin-right:6px;display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;font-style:nomal;font-size:12px;color:#999999;background:url('../img/i_bg2.png') no-repeat 2px center;}
+.content .right  ul.list  li.t  i{color:#fff;background:url('../img/i_bg1.png') no-repeat 2px center;}
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+﻿/*  */
+.direct{width:1000px;height:45px;line-height:45px;margin:0 auto;font-size:14px;color:#999999;}
+.direct a.d{color:#505767;margin:0 7px;}
+.direct a.s{color:#1369c0;margin:0 7px;}
+
+.content{width:1000px;margin:0 auto;overflow:hidden;margin-bottom:50px;min-height:650px;}
+.content .left{display:inline;float:left;padding:0 20px;width:660px;overflow:hidden;}
+.content  .report{border:1px solid #e4e4e4;}
+.content  h4.title{display:block;font-size:26px;color:#414141;margin-bottom:20px;}
+.content  h4.title   img{margin-right:10px;vertical-align:middle;}
+
+.content .right{display:inline;float:right;padding:10px 15px;width:236px;border:1px solid #e4e4e4;}
+.content .right  h4.r_title{margin-bottom:10px;font-size:20px;color:#505767;line-height:35px;border-bottom:2px solid #e6e6e6;}
+.content .right  h4.r_title  a{display:inline-block;border-bottom:2px solid #1369c0;margin-bottom:-2px;}
+.content .right  ul.list{color:#252525;font-size:14px;}
+.content .right  ul.list  li{border-bottom:1px dashed #d2d2d2;font-size:12px;color:#595959;cursor:pointer;display:inline-block;line-height:32px;clear:both;}
+.content .right  ul.list  li img{display:inline-block;vertical-align:middle;margin-right:6px;}
+.content .right  ul.list  li  a.title:hover{text-decoration:underline;color:#cc0000;}
+.content .right  ul.list  li  a.title{font-size:14px;color:#000101;vertical-align:middle;display:inline-block;width:212px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.content .right  ul.list  li  i{margin-right:2px;display:inline-block;width:9px;height:7px;background-color:#dddddd;}
+.content .right  ul.list  li  i.active{background-color:#d85859;}
+.content .right  ul.list  span.color{margin-left:40px;}
+
+.tools{position:fixed;bottom:0px;left:0;right:0;height:43px;line-height:43px;border-top:1px solid #cccccc;background-color:#efefef;}
+.tools .middle{width:536px;margin:0 auto;}
+.tools .middle img,.tools .middle input{cursor:pointer;display:inline-block;vertical-align:top;margin-top:10px;}
+.tools .middle input{font-size:18px;border:1px solid #dddddd;width:38px;height:18px;text-align:right;line-height:18px;}
+.tools .middle .small{margin-left:126px;}
+.tools .middle .big{margin-left:34px;}
+.tools .middle .allscreen{margin-left:34px;}
+.tools .middle .download{margin-left:96px;margin-top:5px;}
+
+
+
+
+

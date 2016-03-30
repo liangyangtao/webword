@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+  <context id="context1" >
+		<plugin type="com.util.PaginationPlugin" />
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://10.0.0.41:3306/word_db?autoReconnect=true&amp;characterEncoding=UTF-8"
+			userId="root" password="123456" />
+		<javaModelGenerator targetPackage="com.database.bean"
+			targetProject="webword/src" />
+		<sqlMapGenerator targetPackage="com.database.dao"
+			targetProject="webword/src" />
+		<javaClientGenerator targetPackage="com.database.dao"
+			targetProject="webword/src" type="XMLMAPPER" />
+		<!--  
+		<table schema="know_db" tableName="know_article"
+			domainObjectName="Article">
+		</table>
+		<table schema="know_db" tableName="know_whole"
+			domainObjectName="ContentWhole">
+		</table>
+		<table schema="know_db" tableName="pub_users"
+			domainObjectName="User">
+		</table>
+		<table schema="know_db" tableName="ptf_crawl"
+			domainObjectName="Article">
+		</table>
+		<table schema="know_db" tableName="ptf_crawl_text"
+			domainObjectName="CrawlText">
+		</table>
+		<table schema="know_db" tableName="ind_area"
+			domainObjectName="Area">
+		</table>
+		<table schema="know_db" tableName="ind_industry"
+			domainObjectName="Industry">
+		</table>
+		<table schema="know_db" tableName="know_article_property"
+			domainObjectName="ArticleProperty">
+		</table>
+		<table schema="know_db" tableName="know_plugin"
+			domainObjectName="Plugin">
+		</table>
+		<table schema="know_db" tableName="know_plugin_user"
+			domainObjectName="PluginUser">
+		<table schema="know_db" tableName="know_contentplugin"
+			domainObjectName="ContentPlugin">
+		</table>
+		<table schema="know_db" tableName="word_plate"
+			domainObjectName="WordPlate">
+		<table schema="know_db" tableName="word_plate"
+			domainObjectName="WordPlate">
+		</table>
+		</table>
+		<table schema="word_db" tableName="ind_area"
+			domainObjectName="Area">
+		</table>
+		<table schema="word_db" tableName="verifydoc_log"
+			domainObjectName="VerifyDoc">
+		</table>
+		<table schema="word_db" tableName="know_article"
+			domainObjectName="Article">
+		</table>
+				<table schema="word_db" tableName="know_article"
+			domainObjectName="Article">
+		</table>
+		-->
+		<!-- <table schema="word_db" tableName="word_plate"
+			domainObjectName="WordPlate">
+		</table> -->
+<!-- 		news_user_search_log
+news_user_look_log
+news_user_favorite
+news_word
+news_stop_word
+news_my_plate
+new_column
+news_group_contact
+news_column_group
+new_column_type
+ -->
+		
+ 		<table schema="word_db" tableName="news_user_search_log"
+			domainObjectName="NewsUserSearchLog">
+		</table> 
+		<table schema="word_db" tableName="news_user_favorite"
+			domainObjectName="NewsUserFavorite">
+		</table> 
+		<table schema="word_db" tableName="news_word"
+			domainObjectName="NewsWord">
+		</table> 
+		<table schema="word_db" tableName="news_stop_word"
+			domainObjectName="NewsStopWord">
+		</table>  
+		<table schema="word_db" tableName="news_column_type"
+			domainObjectName="NewsColumnType">
+		</table>
+		<table schema="word_db" tableName="news_column_group"
+			domainObjectName="NewsColumnGroup">
+		</table>
+		<table schema="word_db" tableName="news_group_contact"
+			domainObjectName="NewsGroupContact">
+		</table> 
+		<table schema="word_db" tableName="news_column"
+			domainObjectName="NewsColumn">
+		</table>
+		 <table schema="word_db" tableName="news_my_plate"
+			domainObjectName="NewsMyPlate">
+		</table>
+			
+		
+			
+			
+		
+		
+			
+  </context>
+</generatorConfiguration>

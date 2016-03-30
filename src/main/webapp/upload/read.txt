@@ -1,0 +1,86 @@
+更新版本
+1.增加日志输出
+2.插件选择增加，市和区的选择,供房地产插件测试
+3.风险预警增减收藏。
+4.风险预警增减注册到期提示。
+
+版本1.0
+1.这次speing3.1 和MySQL数据库。
+2.自动生成mybatis-generator。
+3.word.action简单的测试类
+
+src目录结构说明
+1.com.web 为controller和service
+2.com.database 为mybatis-generator自动生成自动生成
+3.com.common和com.util  为公共的类库
+
+webRoot目录说明
+1.common :公共的图片和js,css
+2.apps:里面包含对个目录，按照功能划分
+3.jsp：里面包含多个目录，按照功能划分，为jsp页面
+3.upload:上传的图片目录，为项目的说明。
+4.index.jsp 测试页
+
+数据库说明
+ciku:分词使用。
+forum_themes:存储样式。
+ind_area:存储区域信息。
+ind_industry:行业信息
+keywordeditor:风险-信息库相关
+know_article:文档列表
+know_article_property:文档属性表(未用)
+know_articleline_property:文档大纲属性表
+know_ascondition:高级搜索条件
+know_content:未用
+know_contentplugin:内容插件
+know_homepage_property:文档封面
+know_keyword:文档关键词
+know_newssourcedictionary:未用
+know_node:文档节点(未用)。
+know_node_content:文档节点内容(未用)
+know_nopass_reason:审核部通过,原因。
+know_plate:文档分类。
+know_plate_article:分类和文档关系。
+know_plugin:插件信息
+know_plugin_user:我的插件。
+know_whole:文档内容。
+login_log:风险-用户登录日志。
+module:风险-分类信息。
+moduleconstraint:风险-分类信息搜索条件
+moduledoc_log:风险-
+newwordeditor:风险-
+newwordmacheine:风险-
+ptf_crawl:索引新闻
+ptf_crawl_text:索引新闻详情。
+pub_roles:平台同步:用户角色信息。
+pub_users:平台同步:用户信息
+pub_users_roles:平台同步:用户和角色关系。
+readdoc_log:风险-日志
+tags：标签库。
+verifydoc_log:审核日志。
+word_plate:创享平台:栏目
+word_roles:创享平台:角色。
+word_users:创享平台:用户信息。
+word_users_roles:创享平台:用户角色。
+
+
+10.0.2.127
+密码:Windows2008
+D:\service\tomcat8080\webapps\webword
+D:\service\tomcat8081\webapps\adminword
+
+桌面上，有启动程序
+
+程序更新说明
+1.目录替换
+直接覆盖。
+除目录doc,META-INF,resources,ueditor,upload,WEB-INF。
+2.java程序
+进入webword\WEB-INF\classes目录
+直接覆盖com,org文件夹
+3.lib替换
+进入webword\WEB-INF\lib目录
+直接覆盖里面的全部jar文件
+4.更新uedior目录
+进入webword\ueditor目录
+直接覆盖 除jsp文件夹外的，所有目录。

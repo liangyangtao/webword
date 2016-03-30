@@ -1,0 +1,158 @@
+webword 20840
+src
+com
+export
+lucene
+web
+Article
+controller
+ArticleController.java (4 matches)
+110: //LOGGER.info(objectToString(contentPlugin));  
+111: LOGGER.info("urlName=setContentPlugin,urlMsg=设置内容插件,userId="+userId+",articleId="+contentPlugin.getContentpluginArticleid()+","+contentPlugin.toString()+ ... 
+135: LOGGER.info("urlName=getContentPlugin,urlMsg=获取内容插件,contentpluginId="+contentpluginId);  
+152: LOGGER.info("urlName=delContentPlugin,urlMsg=删除内容插件,contentpluginId="+contentpluginId);  
+service
+ArticleService.java (7 matches)
+  
+226: LOGGER.info("urlName=ContentPlugin,urlMsg=内容插件执行,userId="+userId+",articleId="+articleId+",strType="+contentPlugin.getStrType()+",crawlIdList="+StringUtils.join(crawlIdList.toArray(),";")+",esIdList="+StringUtils.join(esIdList.toArray(),";"));  
+document
+controller
+DocumentController.java (10 matches)
+81: LOGGER.info("urlName=searchNews,urlMag=搜索新闻,"+searchBean.toString()+",crawlIdList="+StringUtils.join(crawlIdList.toArray(),";")+",esIdList="+StringUtils. ... 
+170: LOGGER.info("urlName=queryContentByName,urlMag=搜索新闻,userId="+userId+",contentName="+contentName);  
+198: LOGGER.info("urlName=queryContentById,urlMag=获取新闻,newsId="+newsId);  
+233: LOGGER.info("urlName=queryContentById,urlMag=新闻详情,crawlId="+crawlId+",esId="+esId);  
+263: LOGGER.info("urlName=addContent,urlMag=保存到我的内容,userId="+userId+",state="+maps.get("state")+",info="+maps.get("info"));  
+272: LOGGER.info("urlName=addContent,urlMag=保存到我的内容,newsId="+newsId+",esId="+esId+",userId="+userId+",state="+maps.get("state")+",info="+maps.get("info"));  
+303: LOGGER.info("urlName=searchMyNews,urlMag=查询我的新闻,contentName="+contentName+",userId="+userId);  
+324: LOGGER.info("urlName=newsDelById,urlMag=删除我的内容,id="+id+",userId="+userId);  
+382: LOGGER.info("urlName=searchAdvCondition,urlMag=高级搜索,start="+start+",userId="+userId);  
+408: LOGGER.info("urlName=deleteAdvCondition,urlMag=删除搜索条件,userId="+userId);  
+
+global
+controller
+GlobalController.java (11 matches)
+57: LOGGER.info("urlName=global/getAllArea,urlMsg=获得区域,mid="+mid);  
+75: LOGGER.info("urlName=global/getAllIndustry,urlMsg=获得行业");  
+93: LOGGER.info("urlName=global/getIndustryByPid,urlMsg=pid获得行业,pid="+pid);  
+152: LOGGER.info("urlName=global/getPlateCount,urlMsg=获取栏目数量,useId="+useId+",status="+maps.get("status")+",info="+maps.get("info"));  
+193: LOGGER.info("urlName=global/plateAdd,urlMsg=添加栏目,useId="+useId+",status="+maps.get("status")+",info="+maps.get("info"));  
+235: LOGGER.info("urlName=global/plateAddHot,urlMsg=添加推荐的栏目,useId="+useId+",status="+maps.get("status")+",info="+maps.get("info"));  
+266: LOGGER.info("urlName=global/plateEdit,urlMsg=修改栏目,userId="+userId+",status="+maps.get("status")+",info="+maps.get("info"));  
+297: LOGGER.info("urlName=global/plateDel,urlMsg=删除栏目,userId="+userId+",status="+maps.get("status")+",info="+maps.get("info"));  
+336: LOGGER.info("urlName=global/plateDel,urlMsg=删除栏目,userId="+userId+",status="+maps.get("status")+",info="+maps.get("info"));  
+369: LOGGER.info("urlName=global/getUserWordPlate,urlMsg=获取栏目,useId="+useId);  
+397: LOGGER.info("urlName=global/updateOrder,urlMsg=拖动顺序,firstId="+firstId+",location="+location+",loactionId="+loactionId+",userId="+userId);  
+homePage
+controller
+HomePageController.java (9 matches)
+96: LOGGER.info("urlName=homePage/getHomePageSetting,urlMsg=获取封面,articleId="+articleId);  
+124: LOGGER.info("urlName=homePage/upLoadPic,urlMsg=上传封面,articleId="+articleId);  
+270: LOGGER.info("urlName=homePage/saveHomePageSetting,urlMsg=保存封面,userId="+userId+",state="+map.get("state")+",info="+map.get("info"));  
+296: LOGGER.info("urlName=homePage/deleteHomePageSetting,urlMsg=删除封面,articleId="+articleId+",state="+maps.get("state")+",info="+maps.get("info"));  
+347: LOGGER.info("urlName=homePage/downloadArticle,urlMsg=下载文档,articleId="+articleId+",state="+maps.get("state")+",info="+maps.get("info"));  
+405: LOGGER.info("urlName=homePage/downloadContent,urlMsg=下载内容,articleId="+articleId+",fileName="+maps.get("fileName"));  
+432: LOGGER.info("urlName=homePage/downloadfile,urlMsg=下载文档,articleId="+articleId);  
+526: LOGGER.info("urlName=homePage/importFile,urlMsg=上传文档,userId="+userId);  
+621: LOGGER.info("urlName=homePage/batchImportFile,urlMsg=批量上传文档,userId="+userId);  
+util
+Word.java (7 matches)
+msg
+UnbankSms.java (3 matches)
+73: logger.info("code validate pass! phone:" + mobile + " code:"  
+76: logger.info("code validate not pass! phone:" + mobile  
+156: logger.info("send sms info, phone:" + mobile + " code:" + code  
+plugin
+controller
+PluginController.java (7 matches)
+65: LOGGER.info("urlName=searchPlugins,urlMsg=搜索插件,userId="+userId+",name="+name);  
+87: LOGGER.info("urlName=searchMyPlugins,urlMsg=搜索我的插件,userId="+userId+",name="+name);  
+104: LOGGER.info("urlName=getPlugin,urlMsg=获取插件,pluginId="+pluginId);  
+121: LOGGER.info("urlName=pluginDelById,urlMsg=删除插件,pluginId="+id+",userId="+userId);  
+219: LOGGER.info("urlName=getPlugContent,urlMsg=执行插件,plugId="+plugId+",params="+params);  
+231: LOGGER.info("urlName=getPlugContent,urlMsg=执行插件,state="+map.get("state")+",error="+map.get("error"));  
+265: LOGGER.info("urlName=saveUserPlugin,urlMsg=保存我的插件,pluginId="+pluginId+",userId="+userId+",state="+maps.get("state")+",info="+maps.get("info"));  
+user
+controller
+UserController.java (2 matches)
+111: LOGGER.info("urlName=user/login,urlMsg=用户登录,userName="+userName+",userId="+userId+",state="+map.get("state")+",info="+map.get("info"));  
+135: LOGGER.info("urlName=user/loginOut,urlMsg=用户登出,userName="+userId);  
+view
+controller
+HomeController.java (12 matches)
+197: LOGGER.info("urlName=login,urlMsg=用户登录,account="+account+",result="+map.get("result")+",userId="+map.get("userId"));  
+247: LOGGER.info("urlName=regist,urlMsg=用户注册,userAccount="+user.getUserAccount()+",userPhone="+user.getUserPhone()+",userId="+map.get("userId")+",result="+map.get("result")+",msg="+map.get("msg"));  
+303: LOGGER.info("urlName=logout,urlMsg=用户退出,userId="+user.getUserId());  
+359: LOGGER.info("urlName=view/search,urlMsg=用户搜索模板和文档,keyword="+keyword+",searchType="+searchType+",userId="+userId);  
+403: LOGGER.info("urlName=view/more,urlMsg=用户搜索更多模板和文档,keyword="+keyword+",searchType="+searchType+",userId="+userId);  
+454: LOGGER.info("urlName=view/plate,urlMsg=栏目下文档,plateId="+plateId+",userId="+userId);    
+748: LOGGER.info("urlName=view/preview,urlMsg=预览页面,articleId="+article.getArticleId()+",userId="+userId);  
+771: LOGGER.info("urlName=view/download,urlMsg=下载文档,articleId="+articleId+",userId="+userId);  
+928: LOGGER.info("urlName=view/column,urlMsg=左侧栏目和中间栏目下的文档,columnId="+columnId+",userId="+userId);  
+978: LOGGER.info("文件不存在");  
+RiskMyController.java (3 matches)
+63: LOGGER.info("urlName=risk/view/saveMymodule,urlMsg=保存栏目,result="+result+"userId="+userId);  
+312: LOGGER.info("urlName=risk/view/saveMymodule,urlMsg=保存栏目,keyword="+pb.getKeyword());  
+407: LOGGER.info("urlName=risk/view/myrisk,urlMsg=我的风险预警, userId ="+userId);  
+RiskUserController.java (10 matches)
+ 
+136: LOGGER.info("urlName=risk/view/login,urlMsg=用户登录,userName="+userName+",userId="+userId+",state="+map.get("state")+",info="+map.get("info"));  
+284: LOGGER.info("urlName=risk/view/toregist,urlMsg=注册,result="+map.get("result")+",msg="+map.get("msg"));  
+385: LOGGER.info("urlName=risk/view/perfectdata,urlMsg=修改资料,userId="+user.getUserId());  
+425: LOGGER.info("urlName=risk/view/editpassword,urlMsg=修改密码,userId="+user.getUserId());  
+476: LOGGER.info("urlName=risk/view/fondpassword1,urlMsg=找回密码,result="+map.get("result")+",msg="+map.get("msg"));  
+521: LOGGER.info("urlName=risk/view/fondpassword2,urlMsg=找回密码,result="+map.get("result")+",msg="+map.get("msg"));  
+556: LOGGER.info("urlName=risk/view/fondpassword3,urlMsg=找回密码,result="+map.get("result")+",msg="+map.get("msg"));  
+RiskViewController.java (6 matches)
+137: LOGGER.info("urlName=risk/view/home,urlMsg=风险预警首页,userId="+userId);  
+235: LOGGER.info("urlName=risk/view/getNewsByModuleId,urlMsg=风险栏目下的信息,parentModuleId="+parentModuleId+",userId="+userId+",moduleNames="+moduleNames+",moduleIds="+moduleIds);  
+334: LOGGER.info("urlName=risk/view/getNewsById,urlMsg=风险信息详情,esId="+esId+",userId="+userId+",moduleNames="+moduleNames+",moduleIds="+moduleIds);  
+418: LOGGER.info("urlName=risk/view/getNewsByMid,urlMsg=企业风险信息详情,esId="+esId+",userId="+userId+",moduleNames="+moduleNames+",moduleIds="+moduleIds);  
+448: LOGGER.info("urlName=risk/view/getNewsByModule,urlMsg=风险栏目信息,categoryId="+categoryId+",userId="+userId);  
+491: LOGGER.info("urlName=risk/view/searchByKeyword,urlMsg=风险栏目搜索,categoryId="+categoryId+",keyword="+keyword+",userId="+userId);  
+ShoppingCartController.java (5 matches)
+48: LOGGER.info("urlName=cart/index,urlMsg=我的购物车,userId="+ user.getUserId());  
+85: LOGGER.info("urlName=cart/add,urlMsg=加入购物车,userId="+ user.getUserId()+",resoure_type="+wordShoppingCart.getResoureType()+",journal_id="+wordShoppingCart.getJournalId()+",article_id="+wordShoppingCart.getArticleId());  
+108: LOGGER.info("urlName=cart/add,urlMsg=删除购物车,userId="+ user.getUserId()+",cartIds="+cartIds);  
+130: LOGGER.info("urlName=cart/prevPay,urlMsg=预结算,userId="+ user.getUserId()+",cartIds="+cartIds);  
+151: LOGGER.info("urlName=cart/pay,urlMsg=结算,userId="+ user.getUserId()+",cartIds="+cartIds);  
+UserCenterController.java (23 matches)
+83: LOGGER.info("urlName=user/journal,urlMsg=我的期刊,userId="+ user.getUserId());  
+114: LOGGER.info("urlName=user/journal/add,urlMsg=提交审核期刊,userId="+ user.getUserId()+",result="+map.get("result"));  
+226: LOGGER.info("urlName=user/delJournal,urlMsg=删除我的期刊,userId="+ user.getUserId() + ",journalIds=" + journalIds+",result="+map.get("result"));  
+260: LOGGER.info("urlName=user/journal/detail,urlMsg=期刊详情,userId="+ user.getUserId() + ",journalId=" + journalId);  
+282: LOGGER.info("urlName=user/journal/searchByJournal,urlMsg=搜索期刊下文档,userId="+ user.getUserId());  
+316: LOGGER.info("urlName=user/journal/edit,urlMsg=提交审核期刊,userId="+ user.getUserId()+",result="+map.get("result"));  
+347: LOGGER.info("urlName=user/article,urlMsg=我的文档,userId="+ user.getUserId());  
+374: LOGGER.info("urlName=user/delArticle,urlMsg=删除我的文档,userId="+ user.getUserId() + ",articleIds=" + articleIds+",result="+map.get("result"));  
+404: LOGGER.info("urlName=user/template,urlMsg=我的模板,userId="+ user.getUserId());  
+433: LOGGER.info("urlName=user/content,urlMsg=我的新闻,userId="+ user.getUserId());  
+452: LOGGER.info("urlName=user/content,urlMsg=新闻详情,userId="+ user.getUserId()+",contenId="+newsId);  
+478: LOGGER.info("urlName=user/delContent,urlMsg=删除我的新闻,userId="+ user.getUserId() + ",contentIds=" + contentIds + ",result="+ map.get("result"));  
+508: LOGGER.info("urlName=user/plugin,urlMsg=我的插件,userId="+ user.getUserId());  
+535: LOGGER.info("urlName=user/delPlugin,urlMsg=删除我的插件,userId="+ user.getUserId() + ",pluginUserIds=" + pluginUserIds+ ",result=" + map.get("result"));  
+564: LOGGER.info("urlName=user/recommend,urlMsg=推荐模板,userId="+ user.getUserId());  
+591: LOGGER.info("urlName=user/upload,urlMsg=我的上传,userId="+ user.getUserId());  
+709: LOGGER.info("urlName=user/edit,urlMsg=修改资料,userId="+ user.getUserId());  
+761: LOGGER.info("urlName=user/editSubmit,urlMsg=修改资料,userId="+ user.getUserId()+",result="+map.get("result"));  
+784: LOGGER.info("urlName=user/pass,urlMsg=修改密码,userId="+ user.getUserId());  
+818: LOGGER.info("urlName=user/passSubmit,urlMsg=修改密码,userId="+ user.getUserId()+",result="+map.get("result"));  
+875: LOGGER.info("urlName=user/resource,urlMsg=我的资源库,userId="+ user.getUserId());  
+905: LOGGER.info("urlName=user/purchase,urlMsg=我的资源库,userId="+ user.getUserId());  
+935: LOGGER.info("urlName=user/capital,urlMsg=我的资源库,userId="+ user.getUserId());  
+word
+controller
+WordController.java (13 matches)
+61: LOGGER.info("urlName=wordNew,urlMsg=新建文档,useId="+useId+",articleId="+articleId);  
+91: LOGGER.info("urlName=doContentPlugin,urlMsg=自动执行内容插件,articleId="+articleId+",userId="+userId);  
+123: LOGGER.info("urlName=word,urlMsg=进入文档,userId="+userId+",articleId="+articleId);  
+146: LOGGER.info("urlName=getNodeContent,urlMsg=获取文档内容,articleId="+articleId);  
+171: LOGGER.info("urlName=setArticleContent,urlMsg=保存文档内容,articleId="+articleId+",useId="+useId);  
+210: LOGGER.info("urlName=word/searchArticle,urlMsg="+urlMsg+",userId="+userId+",articleType="+articleType+",passType="+passType+",name="+name);  
+225: LOGGER.info("urlName=word/articleDelById,urlMsg=删除文档,articleId="+id+"userId="+userId);  
+270: LOGGER.info("urlName=word/getContent,urlMsg=文档搜索,articleId="+articleId);  
+289: LOGGER.info("urlName=getNodeList,urlMsg=获取大纲,articleId="+articleId);  
+340: LOGGER.info("urlName=checkArticleName,urlMsg=文档另存为,articleId="+articleId);  
+529: LOGGER.info("urlName=submitCheckName,urlMsg=提交审核,articleId="+articleId+"userId="+userId);  
+651: LOGGER.info("urlName=word/editSubmitApprove,urlMsg=提交审核,articleId="+articleId+",userId="+userId+",state="+maps.get("state")+",info="+maps.get("info")+",a ... 
+679: LOGGER.info("urlName=word/replaceName,urlMsg=重命名,articleId="+articleId+"userId="+userId+",articleName="+articleName);  

@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- base href="http://www.zhishicx.com/webword/" -->
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>知识创享网-用户栏目编辑</title>
+<link rel="stylesheet" type="text/css"	href="../../common/css/cxcss/base.css">
+<link rel="stylesheet" type="text/css"	href="../../common/css/news.css">
+<script type="text/javascript" src="../../common/js/cxjs/global.js"></script>
+<script type="text/javascript" src="../../common/js/cxjs/plate.js"></script>
+<script type="text/javascript" src="../../common/js/cxjs/drag.js"></script>
+<script type="text/javascript" src="../../common/js/cxjs/alert.js"></script>
+</head>
+<body>
+	<!-- header -->
+	<input id="path" value="/webword/" type="hidden">
+	<input id="userId" value="71" type="hidden">
+	<input id="type" value="document" type="hidden">
+	<div name="header" class="header">
+		<div class="bg">
+			<span class="h_left"><a
+				href="http://www.zhishicx.com/webword/view/index.do">首页</a> <span>|</span>
+				<a>客户端</a> <span>|</span> 客服热线：010-63368810</span> <span class="h_right">您好，欢迎来到知识创享网！
+
+				<a style="display:"
+				href="http://www.zhishicx.com/webword/user/journal/index.do"
+				class="username" onmouseover="showHeadUl();"> 创享平台用户</a> <a
+				class="shop_car" id="topShopCar"
+				href="http://www.zhishicx.com/webword/cart/index.do">购物车<span
+					id="cartCount">（0）</span> </a> </span>
+
+			<ul class="hideUl" onmouseleave="hideHeadUl();"
+				onclick="hideHeadUl();">
+				<li class="line"><a
+					href="http://www.zhishicx.com/webword/user/journal/index.do">我的文库</a>
+				</li>
+				<li class="line"><a
+					href="http://www.zhishicx.com/webword/user/recharge.do">我的账户</a>
+				</li>
+				<li><a href="../../common/css/javascript:;"
+					onclick="showDiv(0);">退出</a>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+	<div name="header2" class="header2">
+		<a href="http://www.zhishicx.com/webword/view/home.do"><img
+			class="logo img" src="../../common/img/cximg/header1.png"> </a>
+		<ul class="ul">
+			<li class="li1" style="display:none"><a class="current"
+				name="document">文档</a> <a name="template">模板</a>
+			</li>
+			<li class="li2"><input class="search_input"
+				placeholder="请输入要查找的内容" onfocus="this.placeholder=''"
+				onblur="if(this.value==''){this.placeholder='请输入要查找的内容'}"
+				type="text"> <span><a class="search">搜&nbsp;&nbsp;索</a>
+			</span></li>
+			<li class="li3" style="display:;"><input class="input1"
+				name="articleFormat" checked="checked" id="all" value="all"
+				type="radio"> 全部 <input name="articleFormat" id="doc"
+				value="doc" type="radio"> DOC <input name="articleFormat"
+				id="ppt" value="ppt" type="radio"> PPT <!-- <input type="radio" name="radio1" /> TXT -->
+				<input name="articleFormat" id="pdf" value="pdf" type="radio">
+				PDF <!-- <input type="radio" name="radio1" /> XLS --> <script
+					type="text/javascript">
+					var articleFormat = "";
+					if (articleFormat) {
+						document.getElementById('all').checked = false;
+						document.getElementById(articleFormat).checked = true;
+					}
+				</script> &nbsp;&nbsp;|<span><script type="text/javascript">
+					var searchType = "";
+					if (searchType == "content") {
+						a = "按全文搜索";
+					} else {
+						a = "按标题搜索";
+					}
+					document.write(a);
+				</script>按标题搜索</span><em></em>
+			</li>
+		</ul>
+		<ul style="display: none;" id="searchType" class="hideUl">
+			<span class="icon"></span>
+			<li id="title" onclick="liclick(this)">按标题搜索</li>
+			<li id="content" onclick="liclick(this)">按全文搜索</li>
+		</ul>
+		<ul class="tabUl">
+			<li class="current">文档</li>
+			<li>新闻</li>
+			<li>数据</li>
+			<li>视频</li>
+		</ul>
+		<a href="http://www.zhishicx.com/webword/wordNew.do"
+			onclick="return isLogin();" target="_blank"><img
+			class="upload img" src="../../common/img/cximg/header3.png"> </a>
+	</div>
+	<div name="菜单" class="menu">
+		<div class="menu_bg">
+			<a class="a0" href="http://www.zhishicx.com/webword/view/home.do">首页</a>
+
+			<a class="a1 "
+				href="http://www.zhishicx.com/webword/view/plate.do?plateId=920">企业文化</a>
+
+			<a class="a1 "
+				href="http://www.zhishicx.com/webword/view/plate.do?plateId=921">银行高管动态</a>
+
+			<a class="a1 "
+				href="http://www.zhishicx.com/webword/view/plate.do?plateId=922">商业银行</a>
+
+			<a class="a1 "
+				href="http://www.zhishicx.com/webword/view/plate.do?plateId=923">电子银行</a>
+
+			<a class="a1 "
+				href="http://www.zhishicx.com/webword/view/plate.do?plateId=924">投资银行</a>
+
+			<a class="a1 "
+				href="http://www.zhishicx.com/webword/view/plate.do?plateId=925">债务市场</a>
+
+			<a class="a1 "
+				href="http://www.zhishicx.com/webword/view/plate.do?plateId=926">银行业</a>
+
+			<a class="a1 "
+				href="http://www.zhishicx.com/webword/view/plate.do?plateId=927">股权投资</a>
+
+			<!-- 
+		<a class="a1 " href="view/plate.do?plateId=374">农业农业农业</a> <a
+			class="a2 " href="view/plate.do?plateId=395">工业</a> <a class="a3 "
+			href="view/plate.do?plateId=396">商业</a> <a class="a4 "
+			href="view/plate.do?plateId=397">银行</a> <a class="a5 "
+			href="view/plate.do?plateId=394">农业</a> <a class="a6 "
+			href="view/plate.do?plateId=395">工业</a> <a class="a7 "
+			href="view/plate.do?plateId=396">商业</a> <a class="a8 "
+			href="view/plate.do?plateId=397">银行</a> <a class="a9"
+			href="global/myPlateEdit.do" onclick="return isLogin();"><img
+			class="add" src="../../common/js/cxjs/word/img/add.png" />
+		</a> -->
+			<a class="a9"
+				href="http://www.zhishicx.com/webword/global/myPlateEdit.do"
+				onclick="return isLogin();"><img class="add"
+				src="../../common/img/cximg/add.png"> </a>
+		</div>
+
+		<div class="second_menuBg">
+			<ul class="second_menu">
+				<!--
+		<li><a href="javascript">农业</a><a href="javascript">农业</a><a href="javascript">农业</a>
+		</li>
+		-->
+
+				<li><p style="display: none;"></p>
+				</li>
+
+				<li><p style="display: none;"></p>
+				</li>
+
+				<li><p style="display: none;"></p>
+				</li>
+
+				<li><p style="display: none;"></p>
+				</li>
+
+				<li><p style="display: none;"></p>
+				</li>
+
+				<li><p style="display: none;"></p>
+				</li>
+
+				<li><p style="display: none;"></p>
+				</li>
+
+				<li><p style="display: none;"></p>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+	<!-- header_end -->
+
+	<!-- body -->
+	<div class="userCont">
+
+		<div class="clearfix listBody">
+			<div class="listLeft">
+				<h1 id="myMenuH" class="current">
+					<p onclick="treeDisplay(0)">我的栏目</p>
+				</h1>
+				<ul id="treeUl" class="listAll">
+					<li class="m1_li" id="tree_li_920"><h2>
+							<em class="icon1" onclick="emclick(this)"></em><a
+								href="javascript:treeDisplay(920);" title="企业文化">企业文化</a>
+						</h2></li>
+					<ul class="m1_ul" id="tree_ul_920" style="display:"></ul>
+					<li class="m1_li" id="tree_li_921"><h2>
+							<em class="icon1" onclick="emclick(this)"></em><a
+								href="javascript:treeDisplay(921);" title="银行高管动态">银行高管动态</a>
+						</h2></li>
+					<ul class="m1_ul" id="tree_ul_921" style="display:"></ul>
+					<li class="m1_li" id="tree_li_922"><h2>
+							<em class="icon1" onclick="emclick(this)"></em><a
+								href="javascript:treeDisplay(922);" title="商业银行">商业银行</a>
+						</h2></li>
+					<ul class="m1_ul" id="tree_ul_922" style="display:"></ul>
+					<li class="m1_li" id="tree_li_923"><h2>
+							<em class="icon1" onclick="emclick(this)"></em><a
+								href="javascript:treeDisplay(923);" title="电子银行">电子银行</a>
+						</h2></li>
+					<ul class="m1_ul" id="tree_ul_923" style="display:"></ul>
+					<li class="m1_li" id="tree_li_924"><h2>
+							<em class="icon1" onclick="emclick(this)"></em><a
+								href="javascript:treeDisplay(924);" title="投资银行">投资银行</a>
+						</h2></li>
+					<ul class="m1_ul" id="tree_ul_924" style="display:"></ul>
+					<li class="m1_li" id="tree_li_925"><h2>
+							<em class="icon1" onclick="emclick(this)"></em><a
+								href="javascript:treeDisplay(925);" title="债务市场">债务市场</a>
+						</h2></li>
+					<ul class="m1_ul" id="tree_ul_925" style="display:"></ul>
+					<li class="m1_li" id="tree_li_926"><h2>
+							<em class="icon1" onclick="emclick(this)"></em><a
+								href="javascript:treeDisplay(926);" title="银行业">银行业</a>
+						</h2></li>
+					<ul class="m1_ul" id="tree_ul_926" style="display:"></ul>
+					<li class="m1_li" id="tree_li_927"><h2>
+							<em class="icon1" onclick="emclick(this)"></em><a
+								href="javascript:treeDisplay(927);" title="股权投资">股权投资</a>
+						</h2></li>
+					<ul class="m1_ul" id="tree_ul_927" style="display:"></ul>
+					<li class="m1_li" id="tree_li_928"><h2>
+							<em class="icon1" onclick="emclick(this)"></em><a
+								href="javascript:treeDisplay(928);" title="银行经济管理">银行经济管理</a>
+						</h2></li>
+					<ul class="m1_ul" id="tree_ul_928" style="display:"></ul>
+					<li class="m1_li" id="tree_li_929"><h2>
+							<em class="icon1" onclick="emclick(this)"></em><a
+								href="javascript:treeDisplay(929);" title="中小金融">中小金融</a>
+						</h2></li>
+					<ul class="m1_ul" id="tree_ul_929" style="display:"></ul>
+					<li class="m1_li" id="tree_li_930"><h2>
+							<em class="icon1" onclick="emclick(this)"></em><a
+								href="javascript:treeDisplay(930);" title="贸易金融">贸易金融</a>
+						</h2></li>
+					<ul class="m1_ul" id="tree_ul_930" style="display:"></ul>
+				</ul>
+			</div>
+			<div class="listRight" id="columnList">
+				<p class="navigation">
+					<em></em>我的栏目&nbsp;&gt;&nbsp;<span id="treePath"></span><span
+						class="drag">点击增删，拖动排序</span>
+				</p>
+				<div class="clearfix" id="displayUl1">
+					<ul class="list_ul2" id="displayUl">
+						<li id="display_920" onmousedown="pmousedown(event,this)"
+							class="li_sty"><img src="../../common/img/cximg/banner5.png">
+							<div>
+								<p title="企业文化">
+									企业文化<span class="span1" onclick="plateShow(920)"><em></em>
+									</span>
+								</p>
+							</div> <span onclick="plateDel(event,this,920)" class="span2">×</span>
+						</li>
+						<li id="display_921" onmousedown="pmousedown(event,this)"
+							class="li_sty"><img src="../../common/img/cximg/banner5.png">
+							<div>
+								<p title="银行高管动态">
+									银行高管动态<span class="span1" onclick="plateShow(921)"><em></em>
+									</span>
+								</p>
+							</div> <span onclick="plateDel(event,this,921)" class="span2">×</span>
+						</li>
+						<li id="display_922" onmousedown="pmousedown(event,this)"
+							class="li_sty"><img src="../../common/img/cximg/banner5.png">
+							<div>
+								<p title="商业银行">
+									商业银行<span class="span1" onclick="plateShow(922)"><em></em>
+									</span>
+								</p>
+							</div> <span onclick="plateDel(event,this,922)" class="span2">×</span>
+						</li>
+						<li id="display_923" onmousedown="pmousedown(event,this)"
+							class="li_sty"><img src="../../common/img/cximg/banner5.png">
+							<div>
+								<p title="电子银行">
+									电子银行<span class="span1" onclick="plateShow(923)"><em></em>
+									</span>
+								</p>
+							</div> <span onclick="plateDel(event,this,923)" class="span2">×</span>
+						</li>
+						<li id="display_924" onmousedown="pmousedown(event,this)"
+							class="li_sty"><img src="../../common/img/cximg/banner5.png">
+							<div>
+								<p title="投资银行">
+									投资银行<span class="span1" onclick="plateShow(924)"><em></em>
+									</span>
+								</p>
+							</div> <span onclick="plateDel(event,this,924)" class="span2">×</span>
+						</li>
+						<li id="display_925" onmousedown="pmousedown(event,this)"
+							class="li_sty"><img src="../../common/img/cximg/banner5.png">
+							<div>
+								<p title="债务市场">
+									债务市场<span class="span1" onclick="plateShow(925)"><em></em>
+									</span>
+								</p>
+							</div> <span onclick="plateDel(event,this,925)" class="span2">×</span>
+						</li>
+						<li id="display_926" onmousedown="pmousedown(event,this)"
+							class="li_sty"><img src="../../common/img/cximg/banner5.png">
+							<div>
+								<p title="银行业">
+									银行业<span class="span1" onclick="plateShow(926)"><em></em>
+									</span>
+								</p>
+							</div> <span onclick="plateDel(event,this,926)" class="span2">×</span>
+						</li>
+						<li id="display_927" onmousedown="pmousedown(event,this)"
+							class="li_sty"><img src="../../common/img/cximg/banner5.png">
+							<div>
+								<p title="股权投资">
+									股权投资<span class="span1" onclick="plateShow(927)"><em></em>
+									</span>
+								</p>
+							</div> <span onclick="plateDel(event,this,927)" class="span2">×</span>
+						</li>
+						<li id="display_928" onmousedown="pmousedown(event,this)"
+							class="li_sty"><img src="../../common/img/cximg/banner5.png">
+							<div>
+								<p title="银行经济管理">
+									银行经济管理<span class="span1" onclick="plateShow(928)"><em></em>
+									</span>
+								</p>
+							</div> <span onclick="plateDel(event,this,928)" class="span2">×</span>
+						</li>
+						<li id="display_929" onmousedown="pmousedown(event,this)"
+							class="li_sty"><img src="../../common/img/cximg/banner5.png">
+							<div>
+								<p title="中小金融">
+									中小金融<span class="span1" onclick="plateShow(929)"><em></em>
+									</span>
+								</p>
+							</div> <span onclick="plateDel(event,this,929)" class="span2">×</span>
+						</li>
+						<li id="display_930" onmousedown="pmousedown(event,this)"
+							class="li_sty"><img src="../../common/img/cximg/banner5.png">
+							<div>
+								<p title="贸易金融">
+									贸易金融<span class="span1" onclick="plateShow(930)"><em></em>
+									</span>
+								</p>
+							</div> <span onclick="plateDel(event,this,930)" class="span2">×</span>
+						</li>
+					</ul>
+					<a class="addChannel" href="javascript:;" onclick="showPlatAdd();"><span>+</span>&nbsp;添加栏目</a>
+				</div>
+				<div class="clearfix lanmuTuijian" id="hotColumn">
+					<h3>
+						栏目推荐<em></em>
+					</h3>
+
+
+					<div class="clearfix" id="s30">
+						<h4>热门</h4>
+						<ul class="list_ul2 clearfix">
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="银行经济管理">
+										银行经济管理 <span class="span1" onclick="getColumn(85,1)"><em></em>
+										</span>
+									</p>
+								</div> <span style="display: inline;" class="span2 finish_1"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="企业文化">
+										企业文化 <span class="span1" onclick="getColumn(86,1)"><em></em>
+										</span>
+									</p>
+								</div> <span style="display: inline;" class="span2 finish_1"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="银行高管动态">
+										银行高管动态 <span class="span1" onclick="getColumn(87,1)"><em></em>
+										</span>
+									</p>
+								</div> <span style="display: inline;" class="span2 finish_1"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="商业银行">
+										商业银行 <span class="span1" onclick="getColumn(88,1)"><em></em>
+										</span>
+									</p>
+								</div> <span style="display: inline;" class="span2 finish_1"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="电子银行">
+										电子银行 <span class="span1" onclick="getColumn(89,1)"><em></em>
+										</span>
+									</p>
+								</div> <span style="display: inline;" class="span2 finish_1"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="投资银行">
+										投资银行 <span class="span1" onclick="getColumn(90,1)"><em></em>
+										</span>
+									</p>
+								</div> <span style="display: inline;" class="span2 finish_1"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="债务市场">
+										债务市场 <span class="span1" onclick="getColumn(91,1)"><em></em>
+										</span>
+									</p>
+								</div> <span style="display: inline;" class="span2 finish_1"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="银行业">
+										银行业 <span class="span1" onclick="getColumn(92,1)"><em></em>
+										</span>
+									</p>
+								</div> <span style="display: inline;" class="span2 finish_1"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="股权投资行业">
+										股权投资行业 <span class="span1" onclick="getColumn(93,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(93);"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="投资银行">
+										投资银行 <span class="span1" onclick="getColumn(94,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(94);"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="股权投资">
+										股权投资 <span class="span1" onclick="getColumn(95,1)"><em></em>
+										</span>
+									</p>
+								</div> <span style="display: inline;" class="span2 finish_1"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="产业政策">
+										产业政策 <span class="span1" onclick="getColumn(96,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(96);"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="产业重大政策">
+										产业重大政策 <span class="span1" onclick="getColumn(97,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(97);"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="产业政策解读">
+										产业政策解读 <span class="span1" onclick="getColumn(98,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(98);"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="行业聚焦">
+										行业聚焦 <span class="span1" onclick="getColumn(99,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(99);"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="互联网金融">
+										互联网金融 <span class="span1" onclick="getColumn(100,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(100);"></span>
+							</li>
+
+							<li style="display: none;" class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="行业金融">
+										行业金融 <span class="span1" onclick="getColumn(101,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(101);"></span>
+							</li>
+
+							<li style="display: none;" class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="公司金融">
+										公司金融 <span class="span1" onclick="getColumn(102,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(102);"></span>
+							</li>
+
+							<li style="display: none;" class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="产业">
+										产业 <span class="span1" onclick="getColumn(103,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(103);"></span>
+							</li>
+
+							<li style="display: none;" class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="银行高管">
+										银行高管 <span class="span1" onclick="getColumn(104,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(104);"></span>
+							</li>
+
+						</ul>
+						<p style="display: block;" class="more">
+							<em></em>展开更多
+						</p>
+					</div>
+
+					<div class="clearfix" id="s4">
+						<h4>公司银行业务</h4>
+						<ul class="list_ul2 clearfix">
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="公司金融">
+										公司金融 <span class="span1" onclick="getColumn(109,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(109);"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="贸易金融">
+										贸易金融 <span class="span1" onclick="getColumn(110,1)"><em></em>
+										</span>
+									</p>
+								</div> <span style="display: inline;" class="span2 finish_1"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="中小金融">
+										中小金融 <span class="span1" onclick="getColumn(111,1)"><em></em>
+										</span>
+									</p>
+								</div> <span style="display: inline;" class="span2 finish_1"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="财资管理">
+										财资管理 <span class="span1" onclick="getColumn(112,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(112);"></span>
+							</li>
+
+						</ul>
+						<p class="more">
+							<em></em>展开更多
+						</p>
+					</div>
+
+					<div class="clearfix" id="s1">
+						<h4>银行经营管理</h4>
+						<ul class="list_ul2 clearfix">
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="宏观环境">
+										宏观环境 <span class="span1" onclick="getColumn(2,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(2);"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="区域金融">
+										区域金融 <span class="span1" onclick="getColumn(13,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(13);"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="监管政策">
+										监管政策 <span class="span1" onclick="getColumn(106,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(106);"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="同业竞争">
+										同业竞争 <span class="span1" onclick="getColumn(108,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(108);"></span>
+							</li>
+
+						</ul>
+						<p class="more">
+							<em></em>展开更多
+						</p>
+					</div>
+
+					<div class="clearfix" id="s60">
+						<h4>投资银行业务</h4>
+						<ul class="list_ul2 clearfix">
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="同业业务">
+										同业业务 <span class="span1" onclick="getColumn(120,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(120);"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="投资银行">
+										投资银行 <span class="span1" onclick="getColumn(121,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(121);"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="金融市场业务">
+										金融市场业务 <span class="span1" onclick="getColumn(122,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(122);"></span>
+							</li>
+
+						</ul>
+						<p class="more">
+							<em></em>展开更多
+						</p>
+					</div>
+
+					<div class="clearfix" id="s49">
+						<h4>中小金融业务</h4>
+						<ul class="list_ul2 clearfix">
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="票据">
+										票据 <span class="span1" onclick="getColumn(50,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(50);"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="行业研究">
+										行业研究 <span class="span1" onclick="getColumn(51,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(51);"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="培训">
+										培训 <span class="span1" onclick="getColumn(52,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(52);"></span>
+							</li>
+
+						</ul>
+						<p class="more">
+							<em></em>展开更多
+						</p>
+					</div>
+
+					<div class="clearfix" id="s58">
+						<h4>互联网金融业务</h4>
+						<ul class="list_ul2 clearfix">
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="电子银行">
+										电子银行 <span class="span1" onclick="getColumn(117,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(117);"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="互联网">
+										互联网 <span class="span1" onclick="getColumn(118,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(118);"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="网贷">
+										网贷 <span class="span1" onclick="getColumn(119,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(119);"></span>
+							</li>
+
+						</ul>
+						<p class="more">
+							<em></em>展开更多
+						</p>
+					</div>
+
+					<div class="clearfix" id="s59">
+						<h4>零售金融业务</h4>
+						<ul class="list_ul2 clearfix">
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="小微金融">
+										小微金融 <span class="span1" onclick="getColumn(113,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(113);"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="零售银行">
+										零售银行 <span class="span1" onclick="getColumn(114,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(114);"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="个人消费贷">
+										个人消费贷 <span class="span1" onclick="getColumn(116,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(116);"></span>
+							</li>
+
+							<li class="li_sty" id="display_414"><img
+								src="../../common/img/cximg/banner5.png">
+								<div>
+									<p title="财富管理">
+										财富管理 <span class="span1" onclick="getColumn(123,0)"><em></em>
+										</span>
+									</p>
+								</div> <span class="span2 add_1" onclick="plateAddHot(123);"></span>
+							</li>
+
+						</ul>
+						<p class="more">
+							<em></em>展开更多
+						</p>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="display: none;" class="fixMenuBox">
+		<div class="fixMenuColumn">
+			<span class="closeBt"><em>x</em>&nbsp;关闭</span>
+			<div>
+				<ul>
+
+					<li><a
+						href="http://www.zhishicx.com/webword/global/myPlateEdit.do#s30">热门</a>
+					</li>
+
+					<li><a
+						href="http://www.zhishicx.com/webword/global/myPlateEdit.do#s4">公司银行业务</a>
+					</li>
+
+					<li><a
+						href="http://www.zhishicx.com/webword/global/myPlateEdit.do#s1">银行经营管理</a>
+					</li>
+
+					<li><a
+						href="http://www.zhishicx.com/webword/global/myPlateEdit.do#s60">投资银行业务</a>
+					</li>
+
+					<li><a
+						href="http://www.zhishicx.com/webword/global/myPlateEdit.do#s49">中小金融业务</a>
+					</li>
+
+					<li><a
+						href="http://www.zhishicx.com/webword/global/myPlateEdit.do#s58">互联网金融业务</a>
+					</li>
+
+					<li><a
+						href="http://www.zhishicx.com/webword/global/myPlateEdit.do#s59">零售金融业务</a>
+					</li>
+
+
+				</ul>
+			</div>
+		</div>
+		<div class="fixMenu_hide"></div>
+	</div>
+	<!-- body_end -->
+	<!-- footer -->
+
+	<div name="footer" class="footer">
+		<div class="foot1">
+			友情链接：
+			<p>银行联合信息网</p>
+			|
+			<p>北京百课萃管理咨询有限责任公司</p>
+			|
+			<p>银行金融终端</p>
+			|
+			<p>银行人</p>
+			|
+			<p>理财家园</p>
+			|
+			<p>银行邦</p>
+			|
+			<p>政经人</p>
+		</div>
+		<div class="foot2">
+			客服电话：010-63368810（工作日9:30-17:30）
+			<p>邮箱：ylxkf@unbank.info</p>
+			地址：北京市西城区广安门外大街248号机械大厦1709
+		</div>
+		<div class="foot3">
+			北京银联信投资顾问有限责任公司 版权所有 京ICP备 05058919号
+			<p>Copyright 2009, All right reserved.</p>
+		</div>
+	</div>
+	<!-- footer_end -->
+	<div name="遮挡背景" class="ui_back2" style="display:block">
+		<div name="遮挡背景" class="ui_back"></div>
+	</div>
+	<div class="box_content" style="display:block">
+		<div class="pop_div2 exit_pop">
+			<span class="pop_closeBt"></span>
+			<h3>提示!</h3>
+			<p class='tips'>确认退出?</p>
+			<div class="sb_button">
+				<a onclick="logout()" class="a1">确认</a><a class="a2"
+					onclick="closeDiv()">取消</a>
+			</div>
+		</div>
+		<div id="plateMenuDiv" name="添加栏目" class="pop_div2 add_channel" style="display:block">
+			<span class="pop_closeBt" onclick="closeColumnDiv();"></span>
+			<h3>添加栏目</h3>
+			<div class="sb_middle">
+				<div>
+					<span style="width:50px">栏目名称</span>： <input id="plateName"
+						type="text" value="" style="width:320px" maxlength="6" /> <input
+						id="plateId" type="hidden" value="0" />
+				</div>
+				<div>
+					<ul class="tabul">
+						<li class="current">标签设置</li>
+						<li>关键词设置</li>
+					</ul>
+				</div>
+
+				<ul class="tabBox">
+					<li class="tabDiv">
+						<div class="clearfix">
+							<p>
+								<span class="span1">包含以下的全部标签</span>： <input id="mustTagNames"
+									type="text" value="" />
+							</p>
+							<p>
+								<span class="span1">包含以下任意一个标签</span>： <input
+									id="shouldTagNames" type="text" value="" />
+							</p>
+							<p>
+								<span class="span1">不包含以下标签</span>： <input id="mustNotTagNames"
+									type="text" value="" />
+							</p>
+						</div></li>
+					<li class="tabDiv" style="display:none">
+						<div class="clearfix">
+							<p>
+								<span class="span1">包含以下的全部关键词</span>： <input id="mustWordNames"
+									type="text" value="" />
+							</p>
+							<p>
+								<span class="span1">包含以下任意一个关键词</span>： <input
+									id="shouldWordNames" type="text" value="" />
+							</p>
+							<p>
+								<span class="span1">不包含以下关键词</span>： <input
+									id="mustNotWordNames" type="text" value="" />
+							</p>
+							<p>
+								<span class="span1">关键词位于</span>： <input type="radio" name="key"
+									id="word_con" value="0" /><label for="word_con">全文</label> <input
+									type="radio" name="key" id="word_tit" value="1"
+									checked="checked" /><label for="word_tit">标题</label>
+							</p>
+						</div></li>
+				</ul>
+				<div>
+					<span style="width:50px">选择新闻源</span>： <input id="select_sources"
+						type="text" value="" style="width:302px" /> 						
+						<input	id="selected_sour_id" type="hidden" value="0" />
+				</div>
+			</div>
+			<div class="sb_button">
+				<a class="a5" onclick="platePreview(2,1,1);">预览</a> <a class="a1"
+					onclick="plateButton();">确认</a> <a class="a2"
+					onclick="closeColumnDiv();">取消</a>
+			</div>
+		</div>
+		<div name="查看栏目设置" class="pop_div2 modifi_channel">
+			<span class="pop_closeBt" onclick="closeColumnDiv();"></span>
+			<h3>查看栏目设置</h3>
+			<div class="sb_middle">
+				<div style="display:none">
+					<span style="width:50px">栏目名称</span>： <input id="columnName"
+						type="text" value="" style="width:320px" maxlength="6" /> <input
+						id="columnId2" type="hidden" value="" />
+				</div>
+				<div>
+					<span style="width:50px">栏目名称</span>： <span id="columnName2">发生大幅度释放</span>
+				</div>
+				<div>
+					<ul class="tabul">
+						<li class="current">标签设置</li>
+						<li>关键词设置</li>
+					</ul>
+				</div>
+				<div class="tabBox">
+					<ul>
+						<li class="tabDiv">
+							<div class="clearfix">
+								<p>
+									<span class="span1">包含以下的全部标签</span>：<span id="mustTagNames2"></span>
+								</p>
+								<p>
+									<span class="span1">包含以下任意一个标签</span>：<span
+										id="shouldTagNames2"></span>
+								</p>
+								<p>
+									<span class="span1">不包含以下标签</span>：<span id="mustNotTagNames2"></span>
+								</p>
+							</div></li>
+						<li class="tabDiv" style="display:none">
+							<div class="clearfix">
+								<p>
+									<span class="span1">包含以下的全部关键词</span>： <span
+										id="mustWordNames2"></span>
+								</p>
+								<p>
+									<span class="span1">包含以下任意一个关键词</span>： <span
+										id="shouldWordNames2"></span>
+								</p>
+								<p>
+									<span class="span1">不包含以下关键词</span>：<span
+										id="mustNotWordNames2"></span>
+								</p>
+								<p>
+									<span class="span1">关键词位于</span>： <span id="wordFlag"></span>
+								</p>
+							</div></li>
+					</ul>
+				</div>
+				<div>
+					<span style="width:50px">选择新闻源</span>：
+					 <span	id="select_sources2" class="selected_sour_p">2258环球财经网|2260环球财经|上海金融报|中华纺织网</span>
+					 <input	id="selected_sour_id2" type="hidden" value="4,5,9,14" />
+				</div>
+			</div>
+			<div class="sb_button">
+				<a class="a5" onclick="platePreview(2,1,2);">预览</a> <a class="a2"
+					onclick="closeColumnDiv();">取消</a>
+			</div>
+		</div>
+
+		<div name="预览" class="pop_div2 previ_channel">
+			<span class="pop_closeBt"></span>
+			<h3>新闻预览</h3>
+			<div class="sb_middle">
+				<div class="clearfix listBody" id="paging">
+					<div class="list_box clearfix">
+						<ul style="display: block;" class="list_feiqikan clearfix"
+							id="feiqikan">
+							<li><div class="name">
+									<p title="测试生成文档001">银行高管离职潮1</p>
+								</div>
+								<div class="fullText">随着中国高净值人群的增多、个人财富的积累，在国外早已十分成熟的财富管理与传承工具——家族信托已经受到了国内市场越来越多的关注。从2012年末开始，国内多家信托公司已陆续开始在家族信托领域布局。然.</div>
+
+								<div class="supple">
+									<span>中金在线</span><span>2016-01-29 14:42:21</span>
+								</div></li>
+							<li><div class="name">
+									<p title="中国进出口贸易行业研究月度报告2015年2月刊">中国进出口贸易行业研究月度报告2015年2月刊</p>
+								</div>
+								<div class="fullText">随着中国高净值人群的增多、个人财富的积累，在国外早已十分成熟的财富管理与传承工具——家族信托已经受到了国内市场越来越多的关注。从2012年末开始，国内多家信托公司已陆续开始在家族信托领域布局。然.</div>
+								<div class="supple">
+									<span>中金在线</span><span>2016-01-29 14:42:21</span>
+								</div></li>
+							<li><div class="name">
+									<p title="宏观经济学概述">宏观经济学概述</p>
+								</div>
+								<div class="fullText">随着中国高净值人群的增多、个人财富的积累，在国外早已十分成熟的财富管理与传承工具——家族信托已经受到了国内市场越来越多的关注。从2012年末开始，国内多家信托公司已陆续开始在家族信托领域布局。然.</div>
+								<div class="supple">
+									<span>中金在线</span><span>2016-01-29 14:42:21</span>
+								</div></li>
+							<li><div class="name">
+									<p title="宏观经济学概述">宏观经济学概述</p>
+								</div>
+								<div class="fullText">随着中国高净值人群的增多、个人财富的积累，在国外早已十分成熟的财富管理与传承工具——家族信托已经受到了国内市场越来越多的关注。从2012年末开始，国内多家信托公司已陆续开始在家族信托领域布局。然.</div>
+								<div class="supple">
+									<span>中金在线</span><span>2016-01-29 14:42:21</span>
+								</div></li>
+						</ul>
+					</div>
+					<div class="page_p"><p><a>首页</a><a>&lt;上一页</a><a class="onPage" href="javascript:platePreview(1,2,1,1,1);">1</a><a href="javascript:platePreview(1,2,1,2,1);">2</a><a href="javascript:platePreview(1,2,1,3,1);">3</a><a href="javascript:platePreview(1,2,1,4,1);">4</a><a href="javascript:platePreview(1,2,1,5,1);">5</a><a href="javascript:platePreview(1,2,1,6,1);">6</a><a href="javascript:platePreview(1,2,1,2);">下一页&gt;</a><a href="javascript:platePreview(1,2,1,7,2);">尾页</a></p></div>
+				</div>
+			</div>
+			<div class="sb_button" id="myPlate" style="display:none">				
+				<a class="a1" onclick="confirmInit();">确认</a> 
+				<a class="a2" onclick="cancel();">取消</a>
+			</div>
+			<div class="sb_button" id="recPlate">
+				<a class="sub1" id="sub" style="display:none" onclick="plateAddHot();"></a>
+				<a class="a12" id="sub2" onclick="plateDelHot();">取消订阅</a> 
+				<a class="a3">关闭</a>
+			</div>
+		</div>
+		
+		<div name="全部 我的新闻源" class="pop_div2 news_sourse">
+			<span class="pop_closeBt" ></span>
+			<h3>全部 </h3>
+			<h3 style="width:45%;">已选新闻源</h3>
+			<div class="sb_middle">
+				<div class="div1" id="LeSeaBox">
+					网站名称： <input class="input i1 w70" type="text" /> 板块： <input
+						class="input i2 w70" type="text" /> <a id="LeSearch"
+						onselectstart="return false;">搜索</a><br> <span class="span2">
+						<input type="checkbox" /> 全</span>部：<br>
+					<!--  -->
+					<span class="over_scroll"> </span>
+				</div>
+				<div class="divm">
+					<img class="add" src="../../common/img/cximg/remove-2.png" /><br>
+					<img class="remove" src="../../common/img/cximg/remove.png" />
+				</div>
+				<div class="div2" id="RiSeaBox">
+					网站名称： <input class="input i1 w70" type="text" /> 板块： <input
+						class="input i2 w70" type="text" /> <a id="RiSearch"
+						onselectstart="return false;">搜索</a><br> <span class="span2">
+						<input type="checkbox" /> 全</span>部：<br>
+					<!--  -->
+					<span class="over_scroll"> </span>
+				</div>
+			</div>
+			<div class="sb_button">
+				<a name="确认" class="a1">确认</a><a class="a2">关闭</a>				
+			</div>
+		</div>
+		
+		<div name="已选新闻源" class="pop_div2 selected_sourse">
+			<span class="pop_closeBt" ></span>			
+			<h3>已选新闻源</h3>
+			<div class="sb_middle">			
+				<div class="div2" id="RiSeaBox2">
+					网站名称： <input class="input i1 w70" type="text" /> 板块： <input
+						class="input i2 w70" type="text" /> <a id="RiSearch"
+						onselectstart="return false;">搜索</a><br> <span class="span2">
+						<input type="checkbox" /> 全部：</span><br>
+					<!--  -->
+					<span class="over_scroll"> </span>
+				</div>
+			</div>
+			<div class="sb_button">
+				<a name="确认" class="a1">确认</a><a class="a2">关闭</a>				
+			</div>
+		</div>
+		
+	</div>
+
+	<input id="oldTopList" value="" type="hidden">
+	<input id="oldDelList" value="" type="hidden">
+	<input id="topList" value="" type="hidden">
+	<input id="delList" value="" type="hidden">
+	<input id="initFlag" value="0" type="hidden">
+	<input id="editFlag" value="0" type="hidden">
+	<input id="source" value="" type="hidden">
+	<input id="addFlag" value="1" type="hidden">
+	<input id="contentType" value="" type="hidden">
+	<input id="startPage" value="1" type="hidden">
+	<input id="addOrEdit" value="" type="hidden">
+<script type="text/javascript"	src="../../common/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript"	src="../../common/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../../common/js/cxjs/login.js"></script>
+
+
+</body>
+</html>

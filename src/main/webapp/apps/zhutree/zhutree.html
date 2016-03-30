@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>测试目录树</title>
+<link href="css/tree.css" type="text/css" rel="stylesheet">
+<script src="js/tree.js" type="text/javascript" ></script>
+<script src="js/global.js" type="text/javascript"></script>
+<script>
+var zhuTree1={}
+//页面加载
+function pageload(){
+	//页面记载生成tree
+	zhuTree1 = new zhuTree("treediv");
+	zhuTree1.setJson(treeJson);
+	zhuTree1.show();
+	//console.info(zhuTree.name)
+}
+//添加子元素
+function insertChild(){
+	var node={};
+		node.id="111"
+		node.text="子标题";
+	zhuTree1.insertChild(node)
+}
+//添加到下一个
+function insertNext(node){
+	var node={};
+	node.id="113";
+	node.text="下标题";
+	zhuTree1.insertNext(node)
+}
+//插入到标题之前
+function finsertBefore(){
+	var node={};
+	node.id="113";
+	node.text="上标题";
+	zhuTree1.insertBefore(node);
+}
+function insert(){
+	var node = {};
+	node.id="345";
+	node.text="二级节点";
+	node.order = 2;
+	var parentId = ZU.getSplitId(document.getElementById(zhuTree1.trClickId));
+	zhuTree1.insert(node,parentId);
+}
+/*
+document.oncontextmenu = function(e){
+	
+	stopBubble(e)
+	console.info("document右键菜单")
+	
+	//return false;
+}
+*/
+/*
+document.onclick = function(){
+ var mymenu = document.getElementById("menu");
+ mymenu.style.visibility = "hidden"; 
+}
+*/
+//右键菜单
+</script>
+</head>
+<body onload="pageload()">
+ <input type="button" value="删除选中"  onclick="zhuTree1.delNode()" /> 
+ <input type="button" value="添加子节点(之后)" onclick="insertChild()"/> 
+ <input type="button" value="添加节点之后" onclick = "insertNext()" /> 
+ <input type="button" value="添加节点之前" onclick = "finsertBefore()" /> 
+ <input type="button" value="按照ndoe加入节点" onclick = "insert()" /> 
+ <input type="button" value="带入到一个子节点(失败)" onclick = "insertChildFirst()" /> 
+<div>目录树</div>
+<div id="treediv"></div>
+<br />
+<div>目录树静态html</div>
+<div id="treediv1">
+  <table border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr id="tr">
+        <td><img class="img_tree_del" title="0_1_1"><span>标题</span>1<input type="text" value="123"/></td>
+      </tr>
+      <tr id="tr_1_2_11">
+        <td><img class="tree_space"><img class="img_tree_del" title="1_2_11"><span>标题1-1</span></td>
+      </tr>
+      <tr id="tr_2_3_111">
+        <td><img class="tree_space"><img class="tree_space"><img class="img_tree_del" title="2_3_111"><span>标题1-1-1</span></td>
+      </tr>
+      <tr id="tr_3_4_1111">
+        <td><img class="tree_space"><img class="tree_space"><img class="tree_space"><img class="tree_space"><span>标题1-1-1-1</span></td>
+      </tr>
+      <tr id="tr_4_4_1112">
+        <td><img class="tree_space"><img class="tree_space"><img class="tree_space"><img class="tree_space"><span>标题1-1-1-2</span></td>
+      </tr>
+      <tr id="tr_5_2_12">
+        <td><img class="tree_space"><img class="img_tree_del" title="5_2_12"><span>标题1-2</span></td>
+      </tr>
+      <tr id="tr_6_3_121">
+        <td><img class="tree_space"><img class="tree_space"><img class="tree_space"><span>标题1-2-1</span></td>
+      </tr>
+      <tr id="tr_7_2_13">
+        <td><img class="tree_space"><img class="tree_space"><span>标题1-3</span></td>
+      </tr>
+      <tr id="tr_8_1_2">
+        <td><img class="tree_space"><span>标题2</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br />
+<img  class="img_tree" border="0" src="images/top_add.gif" />
+<div>测试程序2</div>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><img src="" class="img_tree_del" /><span>标题1</span></td>
+  </tr>
+  <tr>
+    <td><img class="tree_space" /><img class="img_tree_del" /><span>标题1-1</span></td>
+  </tr>
+  <tr>
+    <td><img class="tree_space" /><img class="tree_space" /><img class="tree_space" /><span>标题1-1-1</span></td>
+  </tr>
+  <tr>
+    <td><img class="tree_space" /><img class="tree_space" /><span>标题1-2</span></td>
+  </tr>
+  <tr>
+    <td><img class="tree_space" /><span>标题2</span></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><img src="" class="img_tree_del" /><span>标题1</span></td>
+  </tr>
+  <tr>
+    <td><img class="tree_space" /><img class="tree_space" /><img class="tree_space" /><span>标题1-1</span></td>
+  </tr>
+  <tr>
+    <td><img class="tree_space" /><img class="tree_space" /><img class="tree_space" /><span>标题1-1-1</span></td>
+  </tr>
+  <tr>
+    <td><img class="tree_space" /><img class="tree_space" /><span>标题1-2</span></td>
+  </tr>
+  <tr>
+    <td><img class="tree_space" /><span>标题2</span></td>
+  </tr>
+</table>
+<p>ul的静态目录树</p>
+<ul>
+  <li>标题1</li>
+  <ul>
+    <li>标题1-1</li>
+    <ul>
+      <li>标题1-1-1</li>
+      <li>标题1-1-2</li>
+    </ul>
+    <li>标题1-2</li>
+  </ul>
+  <li>标题2</li>
+</ul>
+<p>&nbsp;</p>
+<div unselectable="on" class="x-grid-cell-inner x-grid-cell-inner-treecolumn" style="text-align:left;"><img src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" class="x-tree-elbow-img x-tree-elbow-line"><img src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" class="x-tree-elbow-img x-tree-elbow-empty"><img src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" class="x-tree-elbow-img x-tree-elbow-empty"><img src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" class="x-tree-elbow-img x-tree-elbow-end"><img src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" class="x-tree-icon x-tree-icon-parent " style="background-image:url(images/jiedian.png)"><span class="x-tree-node-text ">键入标题</span></div>
+<p><span style="width:200px;"></span><span>测试span的宽度</span></p>
+<p>右键菜单</p>
+<!--
+<div id="menu">
+    <ul>
+        <li><a href="#">添加子节点</a></li>
+        <li><a href="#">添加到之后</a></li>
+        <li><a href="#">添加到之前</a></li>
+        <li><a href="#">删除</a></li>
+        <li><a href="#">修改</a></li>
+    </ul>
+</div>
+-->
+<P>其他动作</P>
+<!--
+<div id="menu1">
+    <ul>
+        <li><a href="#">添加子节点</a></li>
+        <li><a href="#">添加到之后</a></li>
+        <li><a href="#">添加到之前</a></li>
+        <li><a href="#">删除</a></li>
+        <li><a href="#">修改</a></li>
+    </ul>
+</div>
+-->
+</body>
+</html>

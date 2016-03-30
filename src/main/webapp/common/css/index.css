@@ -1,0 +1,20 @@
+/*  */
+.i_banner{height:250px;margin-top:8px;width:100%;background:url('../img/i_banner.png') no-repeat center center;background-size:cover;}
+
+.i_box_content{overflow:hidden;width:1034px;margin:20px auto 40px auto;font-size:15px;color:#666666;}
+.i_box_content  .i_box{float:left;display:inline-block;width:314px;margin:15px;height:404px;overflow:hidden;}
+.i_box h4{font-size:18px;color:#2b2b2b;line-height:40px;border-bottom:1px solid #999999;}
+.i_box h4  .ha{cursor:unset;display:inline-block;margin-bottom:-1px;border-bottom:1px solid #1369c0;}
+.i_box h4  span.more{color:#999999;font-size:14px;float:right;margin-right:2px;}
+.i_box  .box_banner{margin:17px 0 22px;}
+.i_box  ul.bul{}
+.i_box  ul.bul li{display:block;width:100%;line-height:24px;}
+.i_box  ul.bul li  a{display:inline-block;width:298px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.i_box  ul.bul li  a:hover{text-decoration:underline;color:#1369c0;}
+.i_box  ul.bul li  img.i_point{display:inline-block;vertical-align:text-top;margin-right:10px;margin-top:4px;}
+.i_box  ul.bul li  img.i_sto{display:inline-block;vertical-align:text-top;float:right;margin-top:10px;}
+
+
+
+
+

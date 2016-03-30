@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+		
+	<!-- 抓取 -->
+	<bean id="unbankCrawlDAO" class="com.lucene.dao.impl.UnbankDAOImpl" autowire="byName">
+		<!-- 改成抓取的数据源 -->
+		<!-- <property name="dataSource" ref="dataSourceCrawl"></property> -->
+	</bean>
+
+	<!-- Service -->
+	<bean id="luceneService" class="com.lucene.service.impl.LuceneServiceImpl"
+		autowire="byName">
+	</bean>
+
+	<!-- 中文分词器 -->
+	<bean id="analyzer" class="org.wltea.analyzer.lucene.IKAnalyzer">
+		<!-- 智能切分 -->
+		<constructor-arg index="0" value="false"></constructor-arg>
+	</bean>
+
+	<!-- 抓取文章 -->
+	<bean id="crawlWriter" class="com.lucene.CrawlWriter"
+		autowire="byName" scope="singleton">
+		<!-- <property name="catDoc" ref="catDoc"></property> -->
+		<property name="unbankDAO" ref="unbankCrawlDAO"></property>
+		<property name="createNewReader" value="true"></property>
+		<property name="all" value="true"></property>
+		<property name="queryLog" value="true"></property>
+		<property name="pageSize" value="5000"></property>
+		<!-- 抓取文章索引目录 -->
+		<constructor-arg name="file">
+			<bean class="java.io.File">
+				<constructor-arg index="0" type="java.lang.String">
+					<value></value>
+				</constructor-arg>
+			</bean>
+		</constructor-arg>
+		<constructor-arg name="analyzer" ref="analyzer">
+		</constructor-arg>
+	</bean>
+</beans>

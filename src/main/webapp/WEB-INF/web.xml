@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<!-- spring-context.xml , activemq-context.xml , spring-servlet.xml-->
+	<!-- ==========spring监听器========== -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	 <listener>
+        <listener-class>com.listener.TimerListener</listener-class>
+    </listener>
+	
+	<!-- ==========sprinp配置文件================== -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:spring-context.xml,classpath:activemq-context.xml</param-value>
+	</context-param>
+	
+	<!-- ===========字符编码过滤器=============== -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	<!-- =======spring请求控制器servlet========== -->
+	<servlet>
+		<servlet-name>springDispatcherServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:spring-servlet.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>springDispatcherServlet</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	<!-- =========session超时设置=========== -->
+	<session-config>
+		<session-timeout>720</session-timeout>
+	</session-config>
+   	<error-page>
+		<error-code>404</error-code>
+		<location>/jsp/404.html</location>
+	</error-page>
+	<welcome-file-list>
+		<welcome-file>/view/index.do</welcome-file>
+	</welcome-file-list>
+	
+	 <jsp-config >
+      <taglib >       
+             <taglib-uri> /tags</taglib-uri >  
+             <taglib-location> /WEB-INF/datetag.tld</taglib-location >           
+      </taglib >  
+  </jsp-config >
+  
+  <!-- =========随机验证码设置=========== -->
+   <servlet>  
+    <servlet-name>Kaptcha</servlet-name>  
+    <servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>  
+    <init-param>  
+        <param-name>kaptcha.border</param-name>    <!-- 是否有边框 -->  
+        <param-value>no</param-value>  
+    </init-param>  
+    <init-param>  
+        <param-name>kaptcha.image.height</param-name>
+        <param-value>34</param-value>  
+    </init-param>  
+    <init-param>  
+        <param-name>kaptcha.image.width</param-name>
+        <param-value>100</param-value>  
+    </init-param>
+    <init-param>  
+        <param-name>kaptcha.textproducer.font.size</param-name>
+        <param-value>24</param-value>  
+    </init-param> 
+    <init-param>  
+        <param-name>kaptcha.textproducer.char.space</param-name>   <!--字符之间的间距 -->  
+        <param-value>8</param-value>  
+    </init-param>  
+    <init-param>  
+        <param-name>kaptcha.textproducer.char.length</param-name>   <!-- 字符的个数 -->  
+        <param-value>4</param-value>  
+    </init-param>    
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>Kaptcha</servlet-name>  
+    <url-pattern>/Kaptcha.jpg</url-pattern>  
+  </servlet-mapping>    
+	
+</web-app>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<items>
+	<spchar01>
+		<name>&amp;nbsp;</name>
+		<value><![CDATA[<o:p>&nbsp;</o:p>]]></value>
+	</spchar01>
+	<spchar02>
+		<name><![CDATA[　]]></name>
+		<value><![CDATA[ ]]></value>
+	</spchar02>
+	<spchar03>
+		<name>&amp;#8203;</name>
+		<value></value>
+	</spchar03>
+</items>

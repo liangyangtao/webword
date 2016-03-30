@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- base href="http://10.21.8.14:8080/webword/" -->
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>知识创享网-充值</title>
+<link rel="stylesheet" type="text/css" href="../../common/css/cxcss/base.css">
+<link rel="stylesheet" type="text/css" href="../../common/css/cxcss/index.css">
+</head>
+<body>
+<!-- header -->
+
+<input type="hidden" id="path" value="/webword/">
+<input type="hidden" id="userId" value="71">
+<input type="hidden" id="type"
+	value="document" />
+<div name="header" class="header">
+    <div class="bg"> <span class="h_left"><a href="view/index.do">首页</a> <span>|</span> <a>客户端</a> <span>|</span> 客服热线：010-63368810</span> <span class="h_right">您好，欢迎来到知识创享网！ <a style="display:" href="user/journal.do" class='username'
+					onMouseOver="showHeadUl();">dongwen</a> </span>
+        <ul class="hideUl" onMouseLeave="hideHeadUl();"
+				onClick="hideHeadUl();">
+            <li class="line"><a href="user/journal.do">个人中心</a> </li>
+            <li><a href="javascript:;" onClick="showDiv(0);">退出</a> </li>
+        </ul>
+    </div>
+</div>
+<div name="header2" class="header2"> <a href="view/home.do"><img class="logo img"
+		src="../../common/img/cximg/header1.png" /> </a>
+    <ul class="ul">
+        <li class="li1" style="display:none"><a
+			class="current" 
+			name="document">文档</a> <a
+			
+			name="template">模板</a> </li>
+        <li class="li2">
+            <input class="search_input" type="text"
+			value="" placeholder="请输入要查找的内容"
+			onfocus="this.placeholder=''"
+			onblur="if(this.value==''){this.placeholder='请输入要查找的内容'}" />
+            <span><a
+				class="search">搜&nbsp;&nbsp;索</a> </span></li>
+        <li class="li3" style="display:;">
+            <input class="input1"
+			type="radio" name="articleFormat" checked="checked" id="all" value="all" />
+            全部
+            <input
+			type="radio" name="articleFormat" id="doc" value="doc"/>
+            DOC
+            <input type="radio" name="articleFormat" id="ppt" value="ppt"/>
+            PPT <!-- <input type="radio" name="radio1" /> TXT -->
+            <input type="radio"
+			name="articleFormat" id="pdf" value="pdf"/>
+            PDF <!-- <input type="radio" name="radio1" /> XLS --> 
+            <script type="text/javascript">
+				var articleFormat="";
+				if(articleFormat){		
+					document.getElementById('all').checked=false;
+					document.getElementById(articleFormat).checked=true;
+				}
+			</script> 
+            &nbsp;&nbsp;|<span><script type="text/javascript">				
+						var searchType="";
+						if(searchType=="content"){
+							a="按全文搜索";
+						}else{
+							a="按标题搜索";
+						}
+						document.write(a);					
+				</script></span><em></em> </li>
+    </ul>
+    <ul id="searchType" class="hideUl">
+        <span class="icon"></span>
+        <li id="title" onclick='liclick(this)'>按标题搜索</li>
+        <li id="content" onclick='liclick(this)'>按全文搜索</li>
+    </ul>
+    <ul class="tabUl">
+        <li class="current">文档</li>
+        <li>新闻</li>
+        <li>数据</li>
+        <li>视频</li>
+    </ul>
+    <a href="wordNew.do" onclick="return isLogin();" target="_blank"><img
+		class="upload img" src="../../common/img/cximg/header3.png" /> </a> </div>
+<div name="菜单" class="menu">
+    <div class="menu_bg"> <a class="a0" href="view/home.do">首页</a> <a class="a1 " href="view/plate.do?plateId=352" >公司金融</a> <a class="a1 " href="view/plate.do?plateId=474" >风险管理</a> <a class="a1 " href="view/plate.do?plateId=615" >银行经济管理</a> <a class="a1 " href="view/plate.do?plateId=616" >企业文化</a> 
+        
+        <!-- 
+		<a class="a1 " href="view/plate.do?plateId=374">农业农业农业</a> <a
+			class="a2 " href="view/plate.do?plateId=395">工业</a> <a class="a3 "
+			href="view/plate.do?plateId=396">商业</a> <a class="a4 "
+			href="view/plate.do?plateId=397">银行</a> <a class="a5 "
+			href="view/plate.do?plateId=394">农业</a> <a class="a6 "
+			href="view/plate.do?plateId=395">工业</a> <a class="a7 "
+			href="view/plate.do?plateId=396">商业</a> <a class="a8 "
+			href="view/plate.do?plateId=397">银行</a> <a class="a9"
+			href="global/myPlateEdit.do" onclick="return isLogin();"><img
+			class="add" src="word/img/cximg/add.png" />
+		</a> --> 
+        <a class="a9"
+			href="global/myPlateEdit.do" onclick="return isLogin();"><img
+			class="add" src="../../common/img/cximg/add.png" /></a> </div>
+    <div class="second_menuBg">
+        <ul class="second_menu">
+            <!--
+		<li><a href="javascript">农业</a><a href="javascript">农业</a><a href="javascript">农业</a>
+		</li>
+		-->
+            
+            <li>
+                <p> <a href="view/plate.do?plateId=585">123</a> </p>
+            </li>
+            <li>
+                <p> </p>
+            </li>
+            <li>
+                <p> <a href="view/plate.do?plateId=626">银行高管动态</a> <a href="view/plate.do?plateId=627">电子银行</a> <a href="view/plate.do?plateId=628">投资银行</a> <a href="view/plate.do?plateId=629">债务市场</a> </p>
+            </li>
+            <li>
+                <p> </p>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- header_end --> 
+
+<!-- body -->
+<div class="userCont">
+    <div class="userTopBg">
+        <div class="userTop">
+            <h3 class="user_name"> <em></em>dongwen </h3>
+            <img src="../../common/img/cximg/tou.gif" class="user_img" /> </div>
+    </div>
+    <div class="clearfix userBody">
+        <div class="userLeft">
+            <h2><a href="javascript:void(0);">我的文库</a><em class="icon2"></em></h2>
+            <ul style="display: block">
+                <li ><a href="user/journal.do">我的期刊<span>(0)</span></a></li>
+                <li ><a href="user/article.do">我的文档<span>(46)</span></a></li>
+                <li ><a href="user/template.do">我的模板<span>(15)</span></a></li>
+                <li ><a href="user/content.do">我的新闻<span>(15)</span></a></li>
+                <li ><a href="user/plugin.do">我的插件<span>(15)</span></a></li>
+                <li ><a href="user/recommend.do">推荐模板<span>(15)</span></a></li>
+                <li ><a href="user/upload.do">我的上传<span>(0)</span></a></li>
+            </ul>
+            <h2><a href="javascript:void(0);">修改资料</a><em class="icon2"></em></h2>
+            <ul style="display: block">
+                <li class="current"><a href="user/edit.do">编辑资料</a></li>
+                <li ><a href="user/pass.do">修改密码</a></li>
+            </ul>
+        </div>
+        <div class="userRight">
+            <h1 style="padding-left:30px;">充值</h1>
+            <div class="userR_ edit_">
+                <form class="userR_form" id="userR_form">
+                    <input type="hidden" id="userId" name="userId" value="71">
+                    <ul>
+                        <li><span class="w75">当前账号：</span>
+                            <p>dongwen</p>
+                        </li>
+                        <li><span class="w75">我的创享币：</span>
+                            <p>50000</p>                            
+                        </li>
+                        
+                        <li><span class="w75">充值数量：</span>                         
+                            <input type="text"  name="userName" id="edi_name" maxlength="9" value='' style="width:155px;">
+                            <span>创享币</span><em style="color:#aaa">1创享币=1元</em>
+                        </li>
+                        <li style="margin-top:20px;"><span class="w75">支付方式：</span>
+                            <p class="pay_ways"><span class="w110 current"><img src="../../common/img/cximg/zhifubao.png"></span>
+                     </p>                            
+                        </li>                        
+                        <li class="form_tips">
+                            <p class="redTip"></p>
+                        </li>
+                        <li class="last">
+                            <input type="button" value="立即支付" class="btn-login btn-rechar" />
+                            
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- body_end --> 
+<!-- footer -->
+
+<div name="footer" class="footer">
+    <div class="foot1">
+        <ul class="ul">
+            <li>关于我们</li>
+            <li>收藏网站</li>
+            <li>管理账户</li>
+            <li>联系我们</li>
+            <li>网站公告</li>
+        </ul>
+        友情链接： <a class="a1">银行联合信息网</a><a class="a1">北京百课萃管理咨询有限责任公司</a><a class="a1">知识创享平台官方微信</a> </div>
+    <div class="foot2"> 客服电话：010-63368810（工作日9:30-17:30） </div>
+    <div class="foot3">
+        <p class="p1">地址：北京市西城区广安门外大街248号机械大厦1709   邮箱：ylxkf@unbank.info<br>
+        </p>
+        <p class="p2">北京银联信投资顾问有限责任公司 版权所有 京ICP备 05058919号 <br>
+            Copyright 2009, All right reserved.</p>
+    </div>
+</div>
+<!-- footer_end -->
+
+<div name="遮挡背景" class="ui_back2">
+    <div name="遮挡背景" class="ui_back"></div>
+</div>
+<div class="box_content">
+    <div class="pop_div pop_div2 exit_pop"> <span class="pop_closeBt" onclick="closeDiv();"></span>
+        <p>提示!</p>
+        <h3>确认退出?</h3>
+        <div class="sb_button"> <a onclick="logout();" class="a1"></a><a class="a2"
+				onclick="closeDiv();"></a> </div>
+    </div>
+    <div class="pop_div pop_div2 sava_failure"> <span class="pop_closeBt" onclick="closeDiv();"></span>
+        <p>提示!</p>
+        <h3>保存失败！用户昵称已存在</h3>
+        <div class="sb_button"> <a onclick="closeDiv();" class="a1"></a> </div>
+    </div>
+    <div class="pop_div pop_div2 sava_success"> <span class="pop_closeBt" onclick="window.location=window.location.toString().replace('?flag=1','')"></span>
+        <p>提示!</p>
+        <h3>保存成功！</h3>
+        <div class="sb_button"> <a onclick="window.location=window.location.toString().replace('?flag=1','')" class="a1"></a> </div>
+    </div>
+    <div class="pop_div pop_div2 no_reason"> <span class="pop_closeBt" onclick="closeDiv();"></span>
+        <h3>审核不通过原因</h3>
+        <div class="sb_middle">将第二个插件删除！</div>
+        <div class="sb_button"> <a class="a3" onclick="closeDiv();"></a> </div>
+    </div>
+    <div class="pop_div pop_div2 dele_pop"> <span class="pop_closeBt" onclick="closeDiv();"></span>
+        <p>提示!</p>
+        <h3>确认删除选中文件?</h3>
+        <div class="sb_button"> <a onclick="del();" class="a1"></a><a class="a2"
+				onclick="closeDiv();"></a> </div>
+    </div>
+    <div class="pop_div pop_div2 my_plug"> <span class="pop_closeBt" onclick="closeDiv();"></span>
+        <h3>提示</h3>
+        <div class="sb_middle">
+            <div> 您对此模板的修改将按以下的方式保存，请选择：<br>
+                <br>
+                <input type="radio"
+					class="radio" name="documentType" value="1" checked="checked" />
+                以此模板新建文档<br>
+                <br>
+                <input type="radio" class="radio"
+					name="documentType" value="2" />
+                编辑原模板<br>
+            </div>
+        </div>
+        <div class="sb_button"> <a class="a1"></a><a class="a3" onclick="closeDiv();"></a> </div>
+    </div>
+    <div name="预览" class="pop_div pop_div2 pre_view_plugin"> <span class="pop_closeBt" onclick="closeDiv();"></span>
+        <h3>行业盈利能力</h3>
+        <div class="sb_middle">
+            <div>基于销售毛利率、销售利润率、资产报酬率三个指标，分析行业盈利能力。</div>
+        </div>
+    </div>
+    <div name="新建期刊" class="pop_div pop_div2 creat_pop"> <span class="pop_closeBt" onclick="closeDiv();"></span>
+        <h3>新建期刊</h3>
+        <div class="sb_middle">
+            <div>
+                <form id="form">
+                    <input type="hidden" name="cover" id="cover" />
+                    <input type="hidden" name="id" id="update_journal_id" />
+                    <input type="hidden" name="type" id="typeName"  value="日刊"/>
+                    <span class="span1">期刊名称</span>：
+                    <input id="qikanName" type="text"
+						name="name"  maxlength="40"/>
+                    <br>
+                    <span class="span1">期刊简介</span>：
+                    <textarea id="qikanBrief" name="skip" maxlength="1000"onfocus="this.placeholder=''" onblur="this.placeholder='1000字以内'" placeholder="1000字以内"></textarea>
+                    <br>
+                    <span class="span1">出刊频率</span>：
+                    <select id="typeId" name="typeId" onchange="$('#typeName').val($(this).find('option:selected').text())">
+                    </select>
+                    <br>
+                    <span class="span1">期刊标签</span>：
+                    <h4> <em onclick="setLabel(this)">银行</em><em onclick="setLabel(this)">中小企业</em><em onclick="setLabel(this)">投资银行</em><em onclick="setLabel(this)">金融</em><em onclick="setLabel(this)">财经</em> </h4>
+                    <div style="padding-left:85px;margin:0;">
+                        <textarea id="brief_3" name="label" maxlength="255" onblur="validBrief();" onfocus='$(this).parent().next().css({"color":"#888","margin-left":"0px"}).text("（多个标签用空格分隔，每个标签最多为40个字）")'></textarea>
+                    </div>
+                    <h5 style="padding-left:78px;">（多个标签用空格分隔，每个标签最多为40个字）</h5>
+                    <span class="span1">期刊关键词</span>：
+                    <input id="keyword_3" type="text"  name="keyword" maxlength="255"  onblur="validKeyword();" onfocus='$(this).next().css({"color":"#888","margin-left":"0px"}).text("（多个关键词用空格分隔，最多15个关键词，每个关键词最多为8个字）")'/>
+                    <h5 style="padding-left:78px;">（多个关键词用空格分隔，最多15个关键词，每个关键词最多为8个字）</h5>
+                </form>
+                <form id="uploadForm" enctype="multipart/form-data" method="post" target="uploadIframe">
+                    <span style="margin-left:-11px" class="span1">封</span>面：
+                    <input
+						type="file" name="upimg" id="upimg">
+                    <input type="button"
+						value="上传" onclick="uploadImg()" class="upform">
+                </form>
+                <h5>封面图片的格式为:".jpg"、".jpeg"、".bmp"、".gif"、".png"；</h5>
+                <h5>大小限制在1M以内！图片推荐尺寸827X1170，分辨率72dpi!</h5>
+            </div>
+        </div>
+        <div class="sb_button"> <a class="a4" onclick="journalAdd();">提交审核</a><a class="a2"
+					onclick="closeDiv();"></a> </div>
+    </div>
+    <div class="pop_div pop_div2 upload_file" name="上传文件"> <span class="pop_closeBt" onclick="closeDiv();"></span>
+        <h3>上传文件</h3>
+        <div class="sb_middle">
+            <form id="uploadWordForm" enctype="multipart/form-data" method="post" target="uploadIframe">
+                <div> <span class="span1">上&nbsp;&nbsp;&nbsp;&nbsp;传：</span>
+                    <input type="file" id="uploadfile" name="uploadfile" class="input">
+                    <!--<a onclick="importFile();">上传</a><br>--> 
+                    <span class="tip">上传文档的格式为：“doc”，“docx”，“pdf”，“ppt”，“pptx”；</span><br>
+                    <!--   批量上传：
+                    <input type="file" id="batchuploadfile" name="batchuploadfile" class="input">
+                    <a onclick="batchimportFile(articleId)">上传</a><br>
+                    <span class="tip">上传word文档的格式为：“zip”；</span><br>
+                    <!-- 请选择类型：<input type="radio" name="radio3" checked="checked"/>文档
+							 <input class="rinput" type="radio" name="radio3"/>模板 --> 
+                </div>
+            </form>
+        </div>
+        <div class="sb_button"> <a class="a1" onclick="importFile();"></a><a class="a3"	onclick="closeDiv();"></a> </div>
+    </div>
+    <div name="提交审核" class="pop_div pop_div2 submit_audit"> <span class="pop_closeBt" onclick="closeDiv();"></span>
+        <h3>提交审核</h3>
+        <form id="upload_submit_form">
+            <div class="sb_middle">
+                <input type="radio" class="radio" id="TypeRadio1" name="Tradio"
+					checked="checked"  value="1"/>
+                <label for="TypeRadio1">期刊文档</label>
+                <input
+					type="radio" class="radio" id="TypeRadio2" name="Tradio" value="0" />
+                <label
+					for="TypeRadio2">非期刊文档</label>
+                <br>
+                <div class="tabDivBg">
+                    <input id="upload_article_id"  name="articleId" type="hidden"/>
+                    <input name="radioValue"  type="hidden" value="2"/>
+                    <input id="articleJournalId" name="articleJournalId" type="hidden" />
+                    <input id="articleJournalName" name="articleJournalName" type="hidden" />
+                    <input id="upload_type_id" name="typeId" type="hidden" />
+                    <h2 class="qikan_h2"><span class="span1">期刊名称</span>：
+                        <input id="upload_qikan_name"  maxlength="40" type="text" 
+							style="width:244px;" />
+                    </h2>
+                    <span
+							class="span1">文档标题</span>：
+                    <input id="upload_article_name" type="text"
+							name="articleName" />
+                    <h2 class="qikan_h2"><span class="span1">文档期次</span>：
+                        <input
+							id="upload_journal_date" class="time" name="articleJournalTime" type="text" 
+						 style="width:85px;" />
+                        <p></p>
+                    </h2>
+                    <span class="span1">文档简介</span>：
+                    <textarea id="upload_article_skip" name="brief"></textarea>
+                    <br>
+                    <span class="signD"><span class="span1">文档标签：</span>
+                    <h4> <em onclick="setLabel(this)">银行</em> <em onclick="setLabel(this)">中小企业</em> <em onclick="setLabel(this)">投资银行</em> <em onclick="setLabel(this)">金融</em> <em onclick="setLabel(this)">财经</em> </h4>
+                    </span>
+                    <div style="padding-left:78px;margin:0;">
+                        <textarea id="upload_article_label" name="articleLabel" maxlength="255" onblur="validBrief();" onfocus='$(this).parent().next().css({"color":"#888","margin-left":"0px"}).text("（多个标签用空格分隔，每个标签最多为40个字）")'></textarea>
+                    </div>
+                    <h5 style="padding-left:78px;margin-bottom:8px;"> （多个标签用空格分隔，每个标签最多为40个字）</h5>
+                    <span class="span1">文档关键词</span>：
+                    <input maxlength="255"
+							id="upload_article_keyword" name="keyword"  type="text"  onblur="validKeyword();" onfocus='$(this).next().css({"color":"#888","margin-left":"0px"}).text("（多个关键词用空格分隔，最多15个关键词，每个关键词最多为8个字）")'/>
+                    <h5 style="padding-left:78px;">（多个关键词用空格分隔，最多15个关键词，每个关键词最多为8个字）</h5>
+                </div>
+            </div>
+        </form>
+        <div class="sb_button"> <a class="a6" onclick="submitArticle();"></a><a class="a3" onclick="closeDiv();"></a> </div>
+    </div>
+<script type="text/javascript" src="../../common/js/jquery-1.8.3.min.js"></script> 
+<script type="text/javascript" src="../../common/js/cxjs/login.js"></script> 
+</body>
+</html>

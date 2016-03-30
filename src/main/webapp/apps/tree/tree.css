@@ -1,0 +1,44 @@
+.articledivtree{ 
+font-size:18px; 
+color:#000;
+width:99%;
+}
+.articledivtree table{
+	width:100%;
+	border-collapse:collapse;
+	border:0px;
+	border-spacing:0; 
+}
+.articledivtree img{
+	vertical-align: middle;
+}
+
+.articledivtree th{
+	white-space:nowrap;
+	padding: 0; 
+	vertical-align : middle;
+}
+.articledivtree td{
+	/*white-space:nowrap;*/
+	vertical-align : middle;
+}
+.articledivtree .preview{
+	width:28px;
+}
+.articledivtree span{
+	color:black;
+}
+.list {
+	padding-left: 10px;
+	background-image: url(line.gif);
+	background-repeat: repeat-y;
+}
+.list1 {
+	padding-left: 10px;
+}
+.moveclass{
+	cursor:move;
+}
+/*
+overflow: hidden;
+*/

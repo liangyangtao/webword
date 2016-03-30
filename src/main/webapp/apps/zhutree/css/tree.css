@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+.treeDiv{
+	margin-bottom: 10px;/*20150814 模板和文档有空白*/
+}
+.tree_space{
+	width: 16px;
+	height: 20px;
+	border:0;
+}
+.img_tree_add{
+	width: 16px;
+	height: 20px;
+	margin-right: 0;
+	background:url(../images/top_add.gif) center;
+	border:0;
+}
+.img_tree_del{
+	width: 16px;
+	height: 20px;
+	margin-right: 0;
+	background:url(../images/top.gif) center;
+	border:0;
+}
+/*icon*/
+.normal{
+	width: 16px;
+	height: 20px;
+	margin-right: 0;
+	background:url(../images/normal.png)  center no-repeat;
+	border:0;
+	display:inline;
+	vertical-align:middle;
+}
+/*icon*/
+.tree_plugin{
+	width: 16px;
+	height: 20px;
+	margin-right: 0;
+	background:url(../images/plugin.png) center no-repeat;
+	border:0;
+}
+/*选中*/
+.tree_tr_mouserover{
+	background:#e1f7e8;
+}
+.tree_tr_mouserout{
+	background:;
+}
+/*鼠标放上*/
+.tree_tr_click{
+	background:#C6F0CD;
+}
+#tree_list_table td{ overflow: hidden;text-overflow: ellipsis; white-space: nowrap;
+    vertical-align: top; box-sizing: border-box;  border-collapse: separate;}
+.treeSpan{/*display:inline-block;width:190px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;*/
+line-height:16px;box-sizing:border-box;font-variant:normal;width:90%;
+cursor:pointer;text-align:left;border-collapse: separate;letter-spacing: 1px;
+	/*
+	background:url(../images/tree1.png) no-repeat;
+	padding-left:15px;	
+	*/
+}
+/*右键菜单*/
+.menu *{margin:0;padding:0;}
+.menu{position:fixed;width:150px;display:none;border:1px solid #666; background: #efefef;z-index:999;}
+.menu li{list-style:none;text-indent:1em;}
+.menu li a{display:block;height:30px;line-height:30px;border-bottom:1px solid #fff;text-decoration:none;color:#666;font:12px/30px tahoma;}
+.menu li a:hover{background:#C6F0CD;color:black;}
+/*透明度*/
+.transparent_class {
+      filter:alpha(opacity=90);
+      -moz-opacity:0.9;
+      -khtml-opacity: 0.9;
+      opacity: 0.9;
+}

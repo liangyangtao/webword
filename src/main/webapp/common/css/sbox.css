@@ -1,0 +1,27 @@
+﻿/*  */
+/* -----------弹出框------------------------------------------------------------------------------------------------------ */
+.ui_back2{left:0;top:0;right:0;bottom:0;width:100%;height:100%;position:absolute;z-index:1001;}
+.ui_back{background-color:#000;opacity:0.2;left:0;top:0;right:0;bottom:0;width:100%;height:100%;position:absolute;z-index:1001;filter:alpha(opacity=20)!important;}
+.box_content{font-family:宋体;position:absolute;width:100%;height:100%;top:0;bottom:0;left:0;right:0;z-index:99999;border:1px solid #444;}
+.sb_middle{height:84px;border:1px solid #19a97b;background-color:#fff;margin-bottom:14px;}
+.sbox_ {position:relative;border:1px solid #19a97b;border-radius:5px;margin:0 auto;width:441px;overflow:hidden;padding:0 6px 11px;background-color:#e1f7e8;margin-top:10%;}
+.sbox_ h3{height:46px;line-height:46px;margin-left:2px;font-size:14px;color:#19a97b;}
+.sbox_ h3 img{cursor:pointer;float:right;margin-right:10px;margin-top:11px;}
+.sb_button a{cursor:pointer;display:inline-block;float:right;margin-right:14px;width:72px;height:30px;}
+.sb_button .a1{background:url("../img/s_yes.png") no-repeat;}
+.sb_button .a2{margin-right:19px;background:url("../img/s_no.png") no-repeat;}
+
+/* 定制我的风险预警信息库 */
+.industry_options {position:absolute;right:0;left:0;top:0;}
+.industry_options  .sb_middle {height:342px;}
+.industry_options  .sb_middle div {overflow:auto;height: 329px;margin-top:6px;margin-bottom:12px;line-height:21px;}
+.industry_options  span{display:block;width:100%;font-size:15px;}
+.industry_options  span input{cursor:pointer;}
+.industry_options  img{display:inline;vertical-align:top;}
+.industry_options .sb_middle dl i{cursor:pointer;display:inline-block;width:12px;height:16px;background:url('../img/choose1.png') no-repeat;}
+.industry_options .sb_middle dl .i_has{}
+.industry_options .sb_middle dl .i_down{background:url('../img/choose3.png') no-repeat;}
+.industry_options .sb_middle dl dt{margin-left:18px;}
+.industry_options .sb_middle dl dd{margin-left:48px;}
+
+

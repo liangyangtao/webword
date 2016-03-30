@@ -1,0 +1,25 @@
+a,body,dd,div,dl,dt,em,form,h1,h2,h3,h4,h5,h6,input,li,ol,p,span,td,textarea,th,ul{margin:0;padding:0}
+body{background:#FFF;font-family:"微软雅黑",tahoma;font-size:14px}
+img{border:none}
+.acticel img{max-width:700px;height:auto}
+.acticel p img{max-width:700px;height:auto}
+.acticel table,.acticel tbody{max-width:700px;width:700px}
+li,ul{list-style:none}
+img,input,label,select{vertical-align:middle;outline:0}
+input{outline:0;border:none}
+a,input,textarea{outline:0}
+textarea{resize:none;overflow:auto}
+table{border-collapse:collapse}
+.clearfix:after,.clearfix:before{content:"";display:table}
+.clearfix:after{clear:both}
+dl:after,ul:after{content:".";display:block;clear:both;visibility:hidden;height:0}
+.f14{font-size:14px}
+a{outline:0}
+a:link{text-decoration:none}
+a:visited{text-decoration:none}
+a:hover{text-decoration:none}
+a:active{text-decoration:none}
+.l{float:left}
+.l a{line-height:40px!important}
+.reportTop .aLink,.reportTop .back_btn,.reportTop i{line-height:24px!important}
+.r{float:right}
